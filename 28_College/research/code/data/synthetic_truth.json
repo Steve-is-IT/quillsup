@@ -1,0 +1,32 @@
+{
+  "seed": 20261005,
+  "note": "SYNTHETIC. Invented to practice analysis. Says nothing about whether Hackles works.",
+  "n_classes": 8,
+  "taught_first_classes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "delayed_classes": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "class_size_range": [
+    18,
+    26
+  ],
+  "class_effect_sd": 0.25,
+  "student_sd": 1.0,
+  "true_logit_gain_taught": 0.9,
+  "retest_logit_gain_all": 0.15,
+  "scale_gain_taught": 0.5,
+  "scale_gain_retest": 0.1,
+  "post_dropout": 0.08,
+  "item_missing": 0.04,
+  "code_failure": 0.05,
+  "candidates": 36,
+  "candidate_true_gain_conf": 0.6
+}

@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo 2: Mystery Fingerprints (Why Websites Store Fingerprints, Not Passwords) | Hackles Reader</title>
+<meta name="description" content="If a website kept your password in a file, anyone who stole the file would have everyone&#x27;s passwords. So good systems keep only a fingerprint of the password. The fingerprint is ma">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/Hackles_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/reader.css">
+<script>try{var t=(location.search.match(/[?&]theme=(white|dark|paper)/)||[])[1]||localStorage.getItem("hk-theme");if(t==="white"||t==="dark"||t==="paper"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}document.documentElement.className+=" js";</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<a class="skip skip2" href="#site-nav">Skip to page navigation</a>
+<header class="site-header">
+<div class="status-banner-wrap"><p class="status-banner" lang="en">Pilot draft: reviewed by AI only; counselor and attorney review pending; verify hotline numbers and state-law statements</p></div>
+<div class="bar">
+<a class="brand" href="../index.html"><img src="../assets/Hackles_favicon.svg" alt="" width="32" height="32"><span>Hackles Reader</span></a>
+<form class="searchbox" role="search" action="../search.html" method="get">
+<label for="hq" class="sr-only">Search the Reader</label>
+<input id="hq" name="q" type="search" placeholder="Search the Reader" autocomplete="off" aria-keyshortcuts="/">
+<button type="submit">Search</button>
+</form>
+<div class="toggles">
+<button type="button" id="nav-toggle" class="tgl navtgl" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<button type="button" id="t-white" class="tgl themetgl" aria-pressed="false" title="Plain white paper, no tints. Saves ink when printing.">White paper</button>
+<button type="button" id="t-dark" class="tgl themetgl" aria-pressed="false" title="Light text on a dark page.">Dark contrast</button>
+</div>
+</div>
+</header>
+<div class="layout">
+<nav id="site-nav" class="sidenav" aria-label="Reader contents">
+<ul class="tree"><li><a href="../index.html">Reader home</a></li><li><details><summary>Start here by role</summary><ul><li><a href="../roles/teacher.html">Classroom teacher</a></li><li><a href="../roles/parent.html">Parent or caregiver</a></li><li><a href="../roles/counselor.html">School counselor</a></li><li><a href="../roles/principal.html">Principal or PD lead</a></li><li><a href="../roles/volunteer.html">Volunteer</a></li></ul></details></li><li class="grp"><p class="tree-group">Grade bands</p><ul><li><details><summary>Grades K-2 (ages 5-7)</summary><ul><li><a href="../01_K-2/index.html">About this folder</a></li><li><a href="../01_K-2/K-2_Teacher_Guide.html" lang="en">Teacher Guide</a></li><li><a href="../01_K-2/K-2_Student_Activity_Book.html" lang="en">My Hackles Activity Book</a></li><li><a href="../01_K-2/K-2_Reproducibles.html" lang="en">Reproducibles</a></li></ul></details></li><li><details><summary>Grades 3-5 (ages 8-10)</summary><ul><li><a href="../02_3-5/index.html">About this folder</a></li><li><a href="../02_3-5/3-5_Teacher_Guide.html" lang="en">Teacher Guide</a></li><li><a href="../02_3-5/3-5_Student_Activity_Book.html" lang="en">Student Activity Book</a></li><li><a href="../02_3-5/3-5_Reproducibles.html" lang="en">Reproducibles</a></li><li><a href="../02_3-5/3-5_Teacher_Answer_Key.html" lang="en">Teacher Answer Key</a></li></ul></details></li><li><details><summary>Grades 6-8 (ages 11-13)</summary><ul><li><a href="../03_6-8/index.html">About this folder</a></li><li><a href="../03_6-8/6-8_Teacher_Guide.html" lang="en">Teacher Guide</a></li><li><a href="../03_6-8/6-8_Student_Workbook.html" lang="en">Student Workbook</a></li><li><a href="../03_6-8/6-8_Reproducibles.html" lang="en">Reproducibles</a></li><li><a href="../03_6-8/6-8_Teacher_Answer_Key.html" lang="en">Teacher Answer Key</a></li></ul></details></li><li><details><summary>Grades 9-12 (ages 14-18)</summary><ul><li><a href="../04_9-12/index.html">About this folder</a></li><li><a href="../04_9-12/9-12_Teacher_Guide.html" lang="en">Teacher Guide</a></li><li><a href="../04_9-12/9-12_Student_Workbook.html" lang="en">Student Workbook</a></li><li><a href="../04_9-12/9-12_Reproducibles.html" lang="en">Reproducibles</a></li><li><a href="../04_9-12/9-12_Teacher_Answer_Key.html" lang="en">Teacher Answer Key</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Adults and families</p><ul><li><details><summary>Teacher support</summary><ul><li><a href="../05_Teacher_Support/index.html">About this folder</a></li><li><a href="../05_Teacher_Support/Counselor_Heads_Up_and_Opt_Out_Toolkit.html" lang="en">Counselor Heads-Up and Opt-Out Toolkit</a></li><li><a href="../05_Teacher_Support/Disclosure_and_Incident_Guide.html" lang="en">Disclosure and Incident Guide</a></li><li><a href="../05_Teacher_Support/Inclusion_and_Equity_Guide.html" lang="en">Inclusion and Equity Guide</a></li><li><a href="../05_Teacher_Support/Teacher_FAQ_25_Questions.html" lang="en">Teacher FAQ: 25 Tough Questions Kids Ask</a></li><li><a href="../05_Teacher_Support/Teacher_Primer.html" lang="en">Teacher Primer</a></li></ul></details></li><li><details><summary>Family pack</summary><ul><li><a href="../06_Family/index.html">About this folder</a></li><li><a href="../06_Family/Family_Engagement_Pack.html" lang="en">Family Engagement Pack</a></li></ul></details></li><li><details><summary>Assessment and Hackles Day</summary><ul><li><a href="../07_Assessment/index.html">About this folder</a></li><li><a href="../07_Assessment/Assessment_Pack.html" lang="en">Assessment Pack</a></li><li><a href="../07_Assessment/Hackles_Day_Kit.html" lang="en">Hackles Day Kit</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Train adults</p><ul><li><details><summary>Teacher Academy</summary><ul><li><a href="../11_Teacher_Academy/index.html">About this folder</a></li><li><a href="../11_Teacher_Academy/Academy_Assessments.html" lang="en">Assessments</a></li><li><a href="../11_Teacher_Academy/Academy_Certificate_and_Badges.html" lang="en">Certificate and Badges</a></li><li><a href="../11_Teacher_Academy/Academy_FAQ.html" lang="en">FAQ (20 Teacher Questions)</a></li><li><a href="../11_Teacher_Academy/Academy_Glossary.html" lang="en">Plain-Language Glossary</a></li><li><a href="../11_Teacher_Academy/Academy_Overview_and_Learning_Path.html" lang="en">Overview and Learning Path</a></li><li><a href="../11_Teacher_Academy/Module_1_Why_This_Matters.html" lang="en">Module 1: Why This Matters</a></li><li><a href="../11_Teacher_Academy/Module_2_The_Cybersecurity_You_Need.html" lang="en">Module 2: The Cybersecurity You Need</a></li><li><a href="../11_Teacher_Academy/Module_3_How_Kids_Really_Live_Online.html" lang="en">Module 3: How Kids Really Live Online</a></li><li><a href="../11_Teacher_Academy/Module_4_Teaching_Safety_That_Works.html" lang="en">Module 4: Teaching Safety That Works</a></li><li><a href="../11_Teacher_Academy/Module_5_Running_a_15_Minute_Hackles_Lesson.html" lang="en">Module 5: Running a 15-Minute Hackles Lesson</a></li><li><a href="../11_Teacher_Academy/Module_6_Sensitive_Topics_and_Disclosures.html" lang="en">Module 6: Sensitive Topics and Disclosures</a></li><li><a href="../11_Teacher_Academy/Module_7_Every_Learner_and_Every_Family.html" lang="en">Module 7: Every Learner and Every Family</a></li><li><a href="../11_Teacher_Academy/Module_8_Measure_Reflect_Grow_and_Capstone.html" lang="en">Module 8: Measure, Reflect, Grow + Capstone</a></li></ul></details></li><li><details><summary>Facilitator kit</summary><ul><li><a href="../12_Facilitator_Kit/index.html">About this folder</a></li><li><a href="../12_Facilitator_Kit/Facilitator_Evaluation_and_Certificates.html" lang="en">Facilitator Evaluation and Certificates</a></li><li><a href="../12_Facilitator_Kit/Facilitator_Guide_Half_Day_Workshop.html" lang="en">Half-Day Workshop (3 Hours)</a></li><li><a href="../12_Facilitator_Kit/Handouts_and_Reproducibles.html" lang="en">Handouts and Reproducibles</a></li><li><a href="../12_Facilitator_Kit/Parent_Night_Presentation_Script.html" lang="en">Parent Night Presentation Script (30 Minutes)</a></li><li><a href="../12_Facilitator_Kit/Peer_Coaching_and_Observation_Guide.html" lang="en">Peer Coaching and Observation Guide</a></li><li><a href="../12_Facilitator_Kit/Principal_Implementation_Checklist.html" lang="en">Principal Implementation Checklist</a></li><li><a href="../12_Facilitator_Kit/Staff_Meeting_Micro_PD_10_Sessions.html" lang="en">Staff Meeting Micro-PD: Ten 15-Minute Sessions</a></li><li><a href="../12_Facilitator_Kit/Train_the_Trainer_Guide.html" lang="en">Train-the-Trainer Guide: Becoming a Hackles Mentor</a></li><li><a href="../12_Facilitator_Kit/Workshop_90_Minute_Version.html" lang="en">The 90-Minute Workshop</a></li><li><a href="../12_Facilitator_Kit/Workshop_Slide_Deck_Outline.html" lang="en">Workshop Slide Deck Outline</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Concepts, games and coloring</p><ul><li><details open><summary>Concepts Lab</summary><ul><li><a href="index.html">About this folder</a></li><li><a href="Concepts_Lab_Index.html" lang="en">Cybersecurity Concepts Lab for Teachers</a></li><li><a href="Demo_01_Long_Passphrases.html" lang="en">Demo 1: Why Long Passphrases Win (The Dice Crack-Timer)</a></li><li><a href="Demo_02_Mystery_Fingerprints_Hashing.html" aria-current="page" lang="en">Demo 2: Mystery Fingerprints (Why Websites Store Fingerprints, Not Passwords)</a></li><li><a href="Demo_03_Anatomy_of_a_Phish.html" lang="en">Demo 3: Anatomy of a Phish (Annotate the Fake)</a></li><li><a href="Demo_04_Secret_Codes_to_Real_Encryption.html" lang="en">Demo 4: From Secret Codes to Real Encryption</a></li><li><a href="Demo_05_Internet_as_Postal_System.html" lang="en">Demo 5: The Internet as a Postal System (Packet Post)</a></li><li><a href="Demo_06_Two_Locks_Better_Than_One.html" lang="en">Demo 6: Two Locks Are Better Than One (The Vault Door Role-Play)</a></li><li><a href="Demo_07_Updates_Patch_the_Hole.html" lang="en">Demo 7: Updates and &quot;Patch the Hole&quot; (The Fence Pattern Game)</a></li><li><a href="Demo_08_Social_Engineering_Defense.html" lang="en">Demo 8: Social Engineering Defense (Hang Up, Look Up, Call Back)</a></li><li><a href="Demo_09_Data_Footprints_and_Data_Brokers.html" lang="en">Demo 9: Data Footprints and Data Brokers (The Mosaic Puzzle)</a></li><li><a href="Demo_10_Backups_and_Ransomware_Recovery.html" lang="en">Demo 10: Backups and Ransomware Recovery (The Lose-Your-Lunch-Box Game)</a></li><li><a href="Demo_11_Malware_Metaphors_Trojan_Horse_Sort.html" lang="en">Demo 11: Malware Metaphors Without Malware (The Trojan Horse Sort Game)</a></li><li><a href="Demo_12_Spot_the_Fake.html" lang="en">Demo 12: Spot the Fake (Deepfakes, Voice Clones and Image Provenance, Unplugged)</a></li><li><a href="Demo_13_Incident_Response_Drill_Hotwash.html" lang="en">Demo 13: Incident Response Drill and the Hotwash (Detect, Contain, Recover, Learn)</a></li><li><a href="Demo_14_Ethics_Law_and_Careers.html" lang="en">Demo 14: Ethics, Law and Careers (The Permission Test, Hats and Responsible Disclosure)</a></li></ul></details></li><li><details><summary>Games and Fun Pack</summary><ul><li><a href="../14_Games_and_Fun/index.html">About this folder</a></li><li><a href="../14_Games_and_Fun/00_Games_and_Fun_Pack_Start_Here.html" lang="en">Start Here</a></li><li><a href="../14_Games_and_Fun/01_Spot_the_Fishy_Card_Game.html" lang="en">Spot the Fishy</a></li><li><a href="../14_Games_and_Fun/02_The_Hackles_Trail_Board_Game.html" lang="en">The Hackles Trail</a></li><li><a href="../14_Games_and_Fun/03_Mission_Quiet_Door_Escape_Missions.html" lang="en">Mission: Quiet Door</a></li><li><a href="../14_Games_and_Fun/04_Read_Alouds_and_Graphic_Stories.html" lang="en">Read-Alouds and Graphic Stories</a></li><li><a href="../14_Games_and_Fun/05_Songs_Chants_and_Movement_Breaks.html" lang="en">Songs, Chants and Movement Breaks</a></li><li><a href="../14_Games_and_Fun/06_Puppet_Show_and_Role_Play_Library.html" lang="en">Puppet Show and Role-Play Library</a></li><li><a href="../14_Games_and_Fun/07_Bingo_Passport_Badges_and_Awards.html" lang="en">Bingo, Passport, Badges and Awards</a></li><li><a href="../14_Games_and_Fun/08_Jokes_Riddles_and_Brain_Teasers.html" lang="en">Jokes, Riddles and Brain Teasers</a></li><li><a href="../14_Games_and_Fun/09_Hackles_Day_Event_Plan.html" lang="en">Hackles Day Event Plan</a></li></ul></details></li><li><details><summary>Coloring and drawing</summary><ul><li><a href="../15_Coloring_and_Drawing/index.html">About this folder</a></li><li><a href="../15_Coloring_and_Drawing/activities/README.html" lang="en">Hackles Activity and Drawing Book (notes)</a></li><li><a href="../15_Coloring_and_Drawing/coloring/README.html" lang="en">Hackles Coloring Book (notes)</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Lesson cards</p><ul><li><details><summary>Lesson at a glance</summary><ul><li><a href="../24_Lesson_Cards/index.html">About this folder</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_01_the-help-ladder.html" lang="en">Lesson 1: The Help Ladder</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_01_the-help-ladder.html" lang="es">Lección 1: La Escalera de Ayuda</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_02_passphrase-lab.html" lang="en">Lesson 2: Passphrase Lab</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_02_passphrase-lab.html" lang="es">Lección 2: Laboratorio de Frases de Contraseña</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_03_scam-spotters.html" lang="en">Lesson 3: Scam Spotters</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_03_scam-spotters.html" lang="es">Lección 3: Detectives de Estafas</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_04_secret-code-lab.html" lang="en">Lesson 4: Secret Code Lab</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_04_secret-code-lab.html" lang="es">Lección 4: Laboratorio de Códigos Secretos</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_05_data-detective.html" lang="en">Lesson 5: Data Detective</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_05_data-detective.html" lang="es">Lección 5: Detective de Datos</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_06_game-chat-red-flags.html" lang="en">Lesson 6: Game Chat Red Flags</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_06_game-chat-red-flags.html" lang="es">Lección 6: Señales de Alarma en el Chat de Juegos</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_07_upstander-moves.html" lang="en">Lesson 7: Upstander Moves</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_07_upstander-moves.html" lang="es">Lección 7: Movimientos de una Persona Aliada</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_08_real-or-fake.html" lang="en">Lesson 8: Real or Fake?</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_08_real-or-fake.html" lang="es">Lección 8: ¿Real o falso?</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_09_family-code-word.html" lang="en">Lesson 9: Family Code Word</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_09_family-code-word.html" lang="es">Lección 9: La Palabra Clave de la Familia</a></li><li><a href="../24_Lesson_Cards/EN/_src/3-5_10_oops-recovery.html" lang="en">Lesson 10: Oops Recovery</a></li><li><a href="../24_Lesson_Cards/ES/_src/3-5_10_oops-recovery.html" lang="es">Lección 10: Recuperación ¡UPS!</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_01_help-ladder-real-practice.html" lang="en">Lesson 1: Help Ladder: Real Practice</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_01_help-ladder-real-practice.html" lang="es">Lección 1: La Escalera de Ayuda: práctica de verdad</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_02_account-defense.html" lang="en">Lesson 2: Account Defense</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_02_account-defense.html" lang="es">Lección 2: Defensa de cuentas</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_03_phish-lab.html" lang="en">Lesson 3: Phish Lab</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_03_phish-lab.html" lang="es">Lección 3: Laboratorio de Phishing</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_04_footprint-and-permissions.html" lang="en">Lesson 4: Footprint &amp; Permissions</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_04_footprint-and-permissions.html" lang="es">Lección 4: Huella digital y permisos</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_05_chatbots-and-ai-companions.html" lang="en">Lesson 5: Chatbots &amp; AI Companions</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_05_chatbots-and-ai-companions.html" lang="es">Lección 5: Chatbots y compañeros de IA</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_06_grooming-patterns.html" lang="en">Lesson 6: Grooming Patterns</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_06_grooming-patterns.html" lang="es">Lección 6: Patrones de manipulación (grooming)</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_07_pressure-online-response-drill.html" lang="en">Lesson 7: Pressure Online: Response Drill</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_07_pressure-online-response-drill.html" lang="es">Lección 7: Presión en línea: el Protocolo de Respuesta</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_08_fakes-that-hurt.html" lang="en">Lesson 8: Fakes That Hurt</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_08_fakes-that-hurt.html" lang="es">Lección 8: Falsificaciones que hacen daño</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_09_group-chat-dynamics.html" lang="en">Lesson 9: Group Chat Dynamics</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_09_group-chat-dynamics.html" lang="es">Lección 9: Dinámicas de los chats de grupo</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_10_built-to-keep-you-scrolling.html" lang="en">Lesson 10: Built to Keep You Scrolling</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_10_built-to-keep-you-scrolling.html" lang="es">Lección 10: Diseñado para que sigas deslizando</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_P1_work-pressure-promises-online.html" lang="en">Lesson P1: Work, Pressure and Promises Online</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_P1_work-pressure-promises-online.html" lang="es">Lección P1: Trabajo, presión y promesas en línea</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_P2_scroll-science.html" lang="en">Lesson P2: Scroll Science</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_P2_scroll-science.html" lang="es">Lección P2: Ciencia del scroll</a></li><li><a href="../24_Lesson_Cards/EN/_src/6-8_P3_fact-fiction-or-fake.html" lang="en">Lesson P3: Fact, Fiction or Fake?</a></li><li><a href="../24_Lesson_Cards/ES/_src/6-8_P3_fact-fiction-or-fake.html" lang="es">Lección P3: ¿Hecho, ficción o falso?</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_01_threat-model-yourself.html" lang="en">Lesson 1: Threat-Model Yourself</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_01_threat-model-yourself.html" lang="es">Lección 1: Modela Tus Amenazas</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_02_credentials-and-passkeys.html" lang="en">Lesson 2: Credentials and Passkeys</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_02_credentials-and-passkeys.html" lang="es">Lección 2: Credenciales y Llaves de Acceso</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_03_social-engineering-case-lab.html" lang="en">Lesson 3: Social Engineering Case Lab</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_03_social-engineering-case-lab.html" lang="es">Lección 3: Laboratorio de Casos de Ingeniería Social</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_04_data-brokers-and-location.html" lang="en">Lesson 4: Data Brokers and Location</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_04_data-brokers-and-location.html" lang="es">Lección 4: Corredores de Datos y Ubicación</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_05_sextortion-and-image-abuse.html" lang="en">Lesson 5: Sextortion and Image Abuse</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_05_sextortion-and-image-abuse.html" lang="es">Lección 5: Sextorsión y Abuso de Imágenes</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_06_synthetic-media-and-truth.html" lang="en">Lesson 6: Synthetic Media and Truth</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_06_synthetic-media-and-truth.html" lang="es">Lección 6: Medios Sintéticos y Verdad</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_07_coercion-in-relationships-online.html" lang="en">Lesson 7: Coercion in Relationships Online</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_07_coercion-in-relationships-online.html" lang="es">Lección 7: Coerción en las Relaciones en Línea</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_08_be-the-helper.html" lang="en">Lesson 8: Be the Helper</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_08_be-the-helper.html" lang="es">Lección 8: Sé quien ayuda</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_09_ethics-and-careers-in-security.html" lang="en">Lesson 9: Ethics and Careers in Security</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_09_ethics-and-careers-in-security.html" lang="es">Lección 9: Ética y carreras en seguridad</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_10_capstone-my-defense-plan.html" lang="en">Lesson 10: Capstone, My Defense Plan</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_10_capstone-my-defense-plan.html" lang="es">Lección 10: Proyecto final, Mi Plan de Defensa</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_P1_recruitment-online.html" lang="en">Lesson P1: Recruitment Online</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_P1_recruitment-online.html" lang="es">Lección P1: Reclutamiento en línea</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_P2_mind-mood-and-the-scroll.html" lang="en">Lesson P2: Mind, Mood, and the Scroll</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_P2_mind-mood-and-the-scroll.html" lang="es">Lección P2: Mente, ánimo y el desplazamiento sin fin</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_P3_whose-goal-is-it.html" lang="en">Lesson P3: Whose Goal Is It?</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_P3_whose-goal-is-it.html" lang="es">Lección P3: ¿De quién es la meta?</a></li><li><a href="../24_Lesson_Cards/EN/_src/9-12_P4_from-mean-to-harmful.html" lang="en">Lesson P4: From Mean to Harmful</a></li><li><a href="../24_Lesson_Cards/ES/_src/9-12_P4_from-mean-to-harmful.html" lang="es">Lección P4: De lo cruel a lo dañino</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_01_my-tell-someone-team.html" lang="en">Lesson 1: My Tell-Someone Team</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_01_my-tell-someone-team.html" lang="es">Lección 1: Mi Equipo de Confianza</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_02_secret-passwords.html" lang="en">Lesson 2: Secret Passwords</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_02_secret-passwords.html" lang="es">Lección 2: Contraseñas Secretas</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_03_pause-and-ask.html" lang="en">Lesson 3: Pause and Ask</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_03_pause-and-ask.html" lang="es">Lección 3: Pausa y Pregunta</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_04_the-oops-button.html" lang="en">Lesson 4: The Oops Button</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_04_the-oops-button.html" lang="es">Lección 4: El Botón ¡Ups!</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_05_private-vs-public.html" lang="en">Lesson 5: Private vs. Public</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_05_private-vs-public.html" lang="es">Lección 5: Privado o Público</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_06_online-friends-vs-real-friends.html" lang="en">Lesson 6: Online Friends vs. Real Friends</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_06_online-friends-vs-real-friends.html" lang="es">Lección 6: Amistades en Línea y en Persona</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_07_kind-clicks.html" lang="en">Lesson 7: Kind Clicks</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_07_kind-clicks.html" lang="es">Lección 7: Clics Amables</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_08_real-or-pretend.html" lang="en">Lesson 8: Real or Pretend?</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_08_real-or-pretend.html" lang="es">Lección 8: ¿De Verdad o de Mentira?</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_09_my-body-is-mine.html" lang="en">Lesson 9: My Body Is Mine</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_09_my-body-is-mine.html" lang="es">Lección 9: Mi Cuerpo es Mío</a></li><li><a href="../24_Lesson_Cards/EN/_src/K-2_10_screen-balance.html" lang="en">Lesson 10: Screen Balance</a></li><li><a href="../24_Lesson_Cards/ES/_src/K-2_10_screen-balance.html" lang="es">Lección 10: Equilibrio con las Pantallas</a></li><li><a href="../24_Lesson_Cards/EN/_src/_booklet_3-5.html" lang="en">Grades 3-5 · Lesson at a Glance</a></li><li><a href="../24_Lesson_Cards/ES/_src/_booklet_3-5.html" lang="es">Grados 3-5 · Lección de un vistazo</a></li><li><a href="../24_Lesson_Cards/EN/_src/_booklet_6-8.html" lang="en">Grades 6-8 · Lesson at a Glance</a></li><li><a href="../24_Lesson_Cards/ES/_src/_booklet_6-8.html" lang="es">Grados 6-8 · Lección de un vistazo</a></li><li><a href="../24_Lesson_Cards/EN/_src/_booklet_9-12.html" lang="en">Grades 9-12 · Lesson at a Glance</a></li><li><a href="../24_Lesson_Cards/ES/_src/_booklet_9-12.html" lang="es">Grados 9-12 · Lección de un vistazo</a></li><li><a href="../24_Lesson_Cards/EN/_src/_booklet_K-2.html" lang="en">Grades K-2 · Lesson at a Glance</a></li><li><a href="../24_Lesson_Cards/ES/_src/_booklet_K-2.html" lang="es">Grados K-2 · Lección de un vistazo</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Schools, colleges and clubs</p><ul><li><details><summary>College Edition</summary><ul><li><a href="../28_College/index.html">About this folder</a></li><li><a href="../28_College/campus_module/00_Facilitator_Guide.html" lang="en">Digital Safety for College Students · Facilitator Guide</a></li><li><a href="../28_College/research/00_Start_Here_Research_Toolkit.html" lang="en">Hackles College Edition, Part A: Research and Evaluation Toolkit (Start Here)</a></li><li><a href="../28_College/teacher_prep/00_Start_Here_Teacher_Prep.html" lang="en">Hackles College Edition, Part A: Teacher Preparation (Start Here)</a></li><li><a href="../28_College/mentor_program/01_Program_Charter_Roles_and_Eligibility.html" lang="en">Hackles Mentors · Program Charter, Roles and Eligibility</a></li><li><a href="../28_College/mentor_program/02_Screening_and_Background_Checks.html" lang="en">Hackles Mentors · Screening and Background Checks</a></li><li><a href="../28_College/mentor_program/03_School_Partner_Agreement_and_Risk_Checklists.html" lang="en">Hackles Mentors · School-Partner Agreement and Risk Checklists</a></li><li><a href="../28_College/mentor_program/04_Mentor_Training_Curriculum_4_Hours.html" lang="en">Hackles Mentors · Four-Hour Training Curriculum</a></li><li><a href="../28_College/mentor_program/05_Code_of_Conduct.html" lang="en">Hackles Mentors · Code of Conduct</a></li><li><a href="../28_College/mentor_program/06_Incident_and_Disclosure_Forms.html" lang="en">Hackles Mentors · Incident and Disclosure Forms</a></li><li><a href="../28_College/mentor_program/07_Service_Hours_Badges_and_Certificates.html" lang="en">Hackles Mentors · Service Hours, Badges and Certificates</a></li><li><a href="../28_College/mentor_program/08_Recruiting_Copy.html" lang="en">Hackles Mentors · Recruiting Copy</a></li><li><a href="../28_College/mentor_program/09_Faculty_Advisor_Guide.html" lang="en">Hackles Mentors · Faculty Advisor Guide</a></li><li><a href="../28_College/mentor_program/10_Semester_Calendar.html" lang="en">Hackles Mentors · Semester Calendar</a></li><li><a href="../28_College/mentor_program/11_Impact_Tracker_Template.html" lang="en">Hackles Mentors · Impact Tracker Template (aggregate counts only)</a></li><li><a href="../28_College/mentor_program/12_Press_and_Recognition_Templates.html" lang="en">Hackles Mentors · Press and Recognition Templates</a></li><li><a href="../28_College/teacher_prep/Assignments_and_Rubrics.html" lang="en">Assignments and Rubrics: Teaching Digital Safety and Cybersecurity in K-12</a></li><li><a href="../28_College/campus_module/Campus_Safety_Card.html" lang="en">Campus Safety Card</a></li><li><a href="../28_College/teacher_prep/Course_Syllabus_3_Credit.html" lang="en">Teaching Digital Safety and Cybersecurity in K-12: Course Syllabus (3 Credit Hours)</a></li><li><a href="../28_College/research/Evidence_Brief_What_Is_Known_and_Not_Known.html" lang="en">What Is Known and Not Known: An Honest Evidence Brief for Hackles</a></li><li><a href="../28_College/teacher_prep/Field_Placement_Guide.html" lang="en">Field Placement Guide: Supervised K-12 Delivery for the Hackles College Course</a></li><li><a href="../28_College/teacher_prep/question_bank/Hackles_College_Question_Bank.html" lang="en">Hackles College Edition: Question Bank (150 items)</a></li><li><a href="../28_College/campus_module/Hackles_for_Adults_Pause_Check_Tell.html" lang="en">Hackles up? Pause. Check. Tell. (for adults)</a></li><li><a href="../28_College/research/IRB_Protocol_Template.html" lang="en">IRB-Ready Protocol Template: Studies of Hackles Teaching and Teacher Preparation</a></li><li><a href="../28_College/teacher_prep/Instructor_Notes.html" lang="en">Instructor Notes: Teaching Digital Safety and Cybersecurity in K-12</a></li><li><a href="../28_College/research/Instruments_and_Codebook.html" lang="en">Research Instruments and Codebook</a></li><li><a href="../28_College/research/Limitations_Statement_Template.html" lang="en">Limitations Statement Template</a></li><li><a href="../28_College/teacher_prep/PD_Version_6_Hours_Non_Credit.html" lang="en">Hackles College Edition: Non-Credit Professional Development Version (6 Hours)</a></li><li><a href="../28_College/research/PPRA_FERPA_COPPA_Considerations_Checklist.html" lang="en">PPRA, FERPA and COPPA Considerations Checklist for Hackles Research</a></li><li><a href="../28_College/campus_module/Poster_Set_Outline.html" lang="en">Poster Set Outline</a></li><li><a href="../28_College/research/Preregistration_Template.html" lang="en">Preregistration Template</a></li><li><a href="../28_College/research/Publication_Authorship_and_Data_Licence_Policy.html" lang="en">Publication, Authorship and Data and Instruments Licence Policy</a></li><li><a href="../28_College/campus_module/RA_and_Peer_Educator_Quick_Guide.html" lang="en">RA and Peer Educator Quick Guide</a></li><li><a href="../28_College/teacher_prep/lms/README_LMS_Shell.html" lang="en">LMS Course Shell: Import Guide and Honest Test Notes</a></li><li><a href="../28_College/teacher_prep/Reading_List.html" lang="en">Reading List: Teaching Digital Safety and Cybersecurity in K-12</a></li><li><a href="../28_College/campus_module/Session_1_Scams_Aimed_at_Students.html" lang="en">Digital Safety for College Students · Session 1: Too Good, Too Fast: Scams Aimed at Students</a></li><li><a href="../28_College/campus_module/Session_2_Accounts_Passkeys_and_Devices.html" lang="en">Digital Safety for College Students · Session 2: Locks You Will Actually Use: Accounts, Passkeys and Devices</a></li><li><a href="../28_College/campus_module/Session_3_Privacy_and_Your_Footprint.html" lang="en">Digital Safety for College Students · Session 3: Your Footprint: Privacy, Location and the Job Search</a></li><li><a href="../28_College/campus_module/Session_4_Synthetic_Media_and_AI.html" lang="en">Digital Safety for College Students · Session 4: Is It Real? Synthetic Media, Voice Clones and Generative AI at School</a></li><li><a href="../28_College/campus_module/Session_5_Image_Based_Abuse_and_Sextortion.html" lang="en">Digital Safety for College Students · Session 5: When Pictures Are Used Against You: Image-Based Abuse and Sextortion</a></li><li><a href="../28_College/campus_module/Session_6_Control_Harassment_and_Upstanders.html" lang="en">Digital Safety for College Students · Session 6: Control, Harassment and Having Each Other&#x27;s Backs</a></li><li><a href="../28_College/research/Statistical_Plan_and_Example_Code.html" lang="en">Statistical Plan and Example Code (Python and R)</a></li><li><a href="../28_College/research/Study_Design_Menu.html" lang="en">Study Design Menu for Small Colleges</a></li><li><a href="../28_College/teacher_prep/Weekly_Course_Plans.html" lang="en">Weekly Course Plans: Teaching Digital Safety and Cybersecurity in K-12</a></li><li><a href="../28_College/teacher_prep/Workshop_Variant_1_Credit_15_Hours.html" lang="en">Hackles College Edition: 1-Credit Workshop Variant (15 Contact Hours)</a></li><li><a href="../28_College/teacher_prep/build/templates/syllabus.html" lang="en">Teaching Digital Safety and Cybersecurity in K-12: Course Syllabus (3 Credit Hours)</a></li></ul></details></li><li><details><summary>Administrator and IT pack</summary><ul><li><a href="../29_Admin/index.html">About this folder</a></li><li><a href="../29_Admin/00_Start_Here_Administrators.html" lang="en">Start Here for Administrators</a></li><li><a href="../29_Admin/01_Free_Resource_Procurement_Brief.html" lang="en">Free Resource Procurement Brief</a></li><li><a href="../29_Admin/02_Security_and_Privacy_Questionnaire.html" lang="en">Completed Security and Privacy Questionnaire</a></li><li><a href="../29_Admin/03_Data_Flow_Statement.html" lang="en">Data-Flow Statement</a></li><li><a href="../29_Admin/04_Accessibility_Conformance_Statement.html" lang="en">Accessibility Conformance Statement</a></li><li><a href="../29_Admin/05_License_and_Open_Source_Summary.html" lang="en">Licence and Open-Source Summary</a></li><li><a href="../29_Admin/05b_License_Texts_Appendix.html" lang="en">Licence Texts Appendix</a></li><li><a href="../29_Admin/06_Board_Memo_and_Consent_Agenda.html" lang="en">Board Memo and Consent Agenda Language</a></li><li><a href="../29_Admin/07_Model_Policy_Internet_Safety_Instruction.html" lang="en">Model Policy Section, Internet Safety and Digital Citizenship Instruction</a></li><li><a href="../29_Admin/08_Parent_Letter_Set.html" lang="en">Parent and Caregiver Letter Set</a></li><li><a href="../29_Admin/09_Staff_Memo.html" lang="en">Staff Memo</a></li><li><a href="../29_Admin/10_Counselor_Coordination_Protocol.html" lang="en">Counselor Coordination Protocol</a></li><li><a href="../29_Admin/11_Crisis_Disclosure_Flowchart_Text.html" lang="en">Crisis and Disclosure Response, Text Version</a></li><li><a href="../29_Admin/12_Scheduling_and_Pacing_Planner.html" lang="en">Scheduling and Pacing Planner</a></li><li><a href="../29_Admin/13_Communications_Kit.html" lang="en">Communications Kit</a></li><li><a href="../29_Admin/14_IT_and_Library_Checklist.html" lang="en">IT and Library Checklist</a></li><li><a href="../29_Admin/15_Implementation_Tracker_Guide.html" lang="en">Implementation Tracker Guide (Evaluation Without Student Data)</a></li><li><a href="../29_Admin/16_Implementation_in_30_Days.html" lang="en">Implementation in 30 Days</a></li><li><a href="../29_Admin/17_Hackles_Day_in_a_Box.html" lang="en">Hackles Day in a Box</a></li></ul></details></li><li><details><summary>Hackles Club</summary><ul><li><a href="../30_Clubs/index.html">About this folder</a></li><li><a href="../30_Clubs/00_Start_Here_Club_Leaders.html" lang="en">Hackles Club: Out-of-School Edition. Start Here for Club Leaders</a></li><li><a href="../30_Clubs/01_Club_Card_Sets.html" lang="en">Hackles Club: Club Card Sets (print, cut, play)</a></li><li><a href="../30_Clubs/02_Track_A_Ages_5-7_Little_Hackles.html" lang="en">Hackles Club, Track A: Little Hackles (Ages 5-7)</a></li><li><a href="../30_Clubs/03_Track_B_Ages_8-11_Hands-On_Hackers.html" lang="en">Hackles Club, Track B: Hands-On Hackers (Ages 8-11)</a></li><li><a href="../30_Clubs/04_Track_C_Ages_12-15_Case_Files.html" lang="en">Hackles Club, Track C: Case Files (Ages 12-15)</a></li><li><a href="../30_Clubs/05_Family_Night_Kit.html" lang="en">Hackles Club: Family Night Kit (90 Minutes, Adults and Kids Together)</a></li><li><a href="../30_Clubs/06_Hackles_Patch_Skills_Checklist.html" lang="en">Hackles Club: The Hackles Patch Skills Checklist</a></li><li><a href="../30_Clubs/07_Homeschool_Co-op_12_Week_Plan.html" lang="en">Hackles Club: Homeschool Co-op Edition (12-Week Plan, Mixed Ages)</a></li><li><a href="../30_Clubs/08_Leader_Orientation_90_Minutes.html" lang="en">Hackles Club: Orientation for New Club Leaders (90 Minutes)</a></li><li><a href="../30_Clubs/09_Registration_Form_Template.html" lang="en">Hackles Club: Registration Form Template (Minimum Data)</a></li><li><a href="../30_Clubs/10_Parent_Letter_and_Permission_Slip.html" lang="en">Hackles Club: Parent Letter and Permission Slip</a></li><li><a href="../30_Clubs/11_Schedule_Planner.html" lang="en">Hackles Club: Schedule Planner</a></li><li><a href="../30_Clubs/12_Adult_Sign_In_and_Impact_Tally.html" lang="en">Hackles Club: Adult Sign-In and Impact Tally (No Child Data)</a></li><li><a href="../30_Clubs/13_Certificate_and_Badge_Design_Brief.html" lang="en">Hackles Club: Certificate and Badge Design Brief</a></li><li><a href="../30_Clubs/14_Library_Toolkit.html" lang="en">Hackles Club: Library Toolkit</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Español</p><ul><li><details><summary lang="es">Español</summary><ul><li><a href="../18_Espanol/index.html" lang="es">Sobre esta carpeta</a></li><li><a href="../18_Espanol/00_Glosario_y_Guia_de_Traduccion.html" lang="es">Glosario y guía de traducción</a></li><li><a href="../18_Espanol/01_K-2_Libro_de_Actividades.html" lang="es">Mi Libro de Actividades</a></li><li><a href="../18_Espanol/01_K-2_Tarjetas_para_la_Familia.html" lang="es">Tarjetas para la Familia</a></li><li><a href="../18_Espanol/02_3-5_Libro_de_Actividades.html" lang="es">Libro de Actividades del Estudiante</a></li><li><a href="../18_Espanol/02_3-5_Tarjetas_para_la_Familia.html" lang="es">Tarjetas para la Familia</a></li><li><a href="../18_Espanol/03_6-8_Cuaderno_del_Estudiante.html" lang="es">Cuaderno del Estudiante</a></li><li><a href="../18_Espanol/03_6-8_Tarjetas_y_Materiales.html" lang="es">Tarjetas y Materiales</a></li><li><a href="../18_Espanol/04_9-12_Cuaderno_del_Estudiante.html" lang="es">Cuaderno del Estudiante</a></li><li><a href="../18_Espanol/04_9-12_Tarjetas_y_Materiales.html" lang="es">Tarjetas y Materiales</a></li><li><a href="../18_Espanol/05_Docentes_Guia_Rapida.html" lang="es">Guía Rápida para Docentes</a></li><li><a href="../18_Espanol/06_Cartas_para_Familias_Temas_Sensibles.html" lang="es">Cartas para las Familias sobre Temas Sensibles</a></li><li><a href="../18_Espanol/06_Familia_Paquete_para_Familias.html" lang="es">Paquete para Familias</a></li><li><a href="../18_Espanol/07_Encuestas_Estudiantes.html" lang="es">Encuestas para Estudiantes (antes y después)</a></li><li><a href="../18_Espanol/Glosario_Anexo_Tarjetas.html" lang="es">Anexo al glosario: tarjetas &quot;Lección de un vistazo&quot;</a></li><li><a href="../18_Espanol/TODO_new_lessons.html" lang="es">TODO: new Plus lessons</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">Florida and states</p><ul><li><details><summary>Florida</summary><ul><li><a href="../20_Florida/index.html">About this folder</a></li><li><a href="../20_Florida/District_Adoption_Guide.html" lang="en">District Adoption Guide</a></li><li><a href="../20_Florida/Florida_HB379_Crosswalk.html" lang="en">HB 379 Crosswalk</a></li><li><a href="../20_Florida/Florida_Statutes_and_Sources.html" lang="en">Statutes and Sources</a></li><li><a href="../20_Florida/Gap_Lesson_Stubs.html" lang="en">Gap Lesson Drafts</a></li><li><a href="../20_Florida/Plus_Lessons_Changelog.html" lang="en">Plus Lessons Changelog</a></li></ul></details></li><li><details><summary>State Atlas</summary><ul><li><a href="../23_State_Atlas/index.html">About this folder</a></li><li><a href="../23_State_Atlas/Sources_A-M.html" lang="en">State Alignment Atlas · Sources (Part 1, A to M)</a></li><li><a href="../23_State_Atlas/Sources_N-W.html" lang="en">State Atlas N-W · Sources</a></li><li><a href="../23_State_Atlas/States_A-M.html" lang="en">State Alignment Atlas · Part 1 (Alabama to Montana, plus D.C.)</a></li><li><a href="../23_State_Atlas/States_N-W.html" lang="en">State Alignment Atlas · Part 2 (Nebraska to Wyoming)</a></li><li><a href="../23_State_Atlas/Unknowns_A-M.html" lang="en">State Alignment Atlas · Unknowns (Part 1, A to M)</a></li><li><a href="../23_State_Atlas/Unknowns_N-W.html" lang="en">State Atlas N-W · Unknowns</a></li></ul></details></li></ul></li><li class="grp"><p class="tree-group">The kit index</p><ul><li><a href="../README_Kit_Index.html">Kit Index</a></li></ul></li><li class="grp"><p class="tree-group">Tools</p><ul><li><a href="../downloads.html">Downloads</a></li><li><a href="../search.html">Search</a></li><li><a href="../how-to-use.html">How to use this Reader</a></li></ul></li></ul>
+</nav>
+<main id="main" class="" tabindex="-1">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html" lang="en">Reader home</a></li><li><a href="index.html">Concepts Lab</a></li><li><span aria-current="page">Demo 2: Mystery Fingerprints (Why Websites Store Fingerprints, Not Passwords)</span></li></ol></nav>
+<header class="page-head"><p class="kicker-line">Concepts Lab</p><h1 id="top">Demo 2: Mystery Fingerprints (Why Websites Store Fingerprints, Not Passwords)</h1><p class="subtitle">Cybersecurity Concepts Lab for Teachers</p><p class="docmeta"><span>Concepts Lab</span><span>3357 words</span></p><p class="formats" lang="en"><span>Other formats:</span> <a href="../../_pdf/13_Concepts_Lab/Demo_02_Mystery_Fingerprints_Hashing.pdf">PDF (print-first, not tagged for screen readers)</a> &middot; <a href="../../13_Concepts_Lab/Demo_02_Mystery_Fingerprints_Hashing.docx">Word (.docx, unverified)</a></p></header><div class="inline-toc"><details class="inl"><summary>On this page</summary><nav class="toc" id="page-toc-inline" aria-labelledby="toc-h2" tabindex="-1"><p class="toc-h" id="toc-h2">On this page</p><ul><li><a href="#1-the-big-idea">1. The big idea</a><details open><summary>Sections (11)</summary><ul><li><a href="#intro-2-what-a-teacher-should-know-plain-language">2. What a teacher should know (plain language)</a></li><li><a href="#intro-3-materials-zero-to-low-cost">3. Materials (zero to low cost)</a></li><li><a href="#intro-4-part-a-teachers-do-it-first-about-20-minutes">4. Part A: Teachers do it first (about 20 minutes)</a></li><li><a href="#intro-5-part-b-teaching-it">5. Part B: Teaching it</a></li><li><a href="#intro-6-teacher-script">6. Teacher script</a></li><li><a href="#intro-7-kid-friendly-analogies-by-band">7. Kid-friendly analogies by band</a></li><li><a href="#intro-8-discussion-questions">8. Discussion questions</a></li><li><a href="#intro-9-level-up-challenge">9. Level-up challenge</a></li><li><a href="#intro-10-safety-and-ethics-notes-defense-only">10. Safety and ethics notes (defense only)</a></li><li><a href="#intro-11-assessment-idea">11. Assessment idea</a></li><li><a href="#intro-12-sources-and-verify-list">12. Sources and [VERIFY] list</a></li></ul></details></li><li><a href="#student-handout-mystery-fingerprints">Student Handout: Mystery Fingerprints</a><details open><summary>Sections (7)</summary><ul><li><a href="#c1-the-big-idea">The big idea</a></li><li><a href="#c1-the-recipe-toy-fingerprint-machine">The recipe (Toy Fingerprint Machine)</a></li><li><a href="#c1-your-turn">Your turn</a></li><li><a href="#c1-the-stolen-ledger">The Stolen Ledger</a></li><li><a href="#c1-add-salt">Add salt!</a></li><li><a href="#c1-think-about-it">Think about it</a></li><li><a href="#c1-remember">Remember</a></li></ul></details></li><li><a href="#teacher-copy-only-answers-for-demo-2-do-not-distribute-to-st">TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)</a></li></ul></nav></details></div><article class="doc prose" lang="en"><p><strong>Trust your hackles.</strong> Pause · Check · Tell</p>
+<p>A free kit by Competence Collective · competencecollective.org · quillsup.org</p>
+<p>© 2026 Competence Collective. Lesson text and teaching materials: CC BY-NC 4.0 (free to print, share and adapt for non-commercial use with credit). The Hackles name, logos, characters and artwork are not covered by that license: print and share them unaltered for classroom and family use; any other use needs written permission. <span class="vtag">[VERIFY with counsel]</span> <strong>No student accounts, no student data collected, ever.</strong></p>
+<p>Status: DRAFT for teacher, counselor and legal review. Items marked <span class="vtag">[VERIFY]</span> need checking against a primary source before publication.</p>
+<div class="table-wrap"><table><caption class="sr-only">Demo 2: Mystery Fingerprints (Why Websites Store Fingerprints, Not Passwords)</caption>
+<thead>
+<tr>
+<th scope="col">At a glance</th>
+<th scope="col"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="At a glance">Big idea</td>
+<td>A hash is a one-way "fingerprint" of data. A site can check your password without keeping it, and a stolen list of fingerprints is much less harmful than a stolen list of passwords.</td>
+</tr>
+<tr>
+<td data-label="At a glance">Grade bands</td>
+<td>K-2 (the "smoothie machine" idea only), 3-5 (full game), 6-8 (full game + collisions), 9-12 (full game + salts, slow hashes, integrity checks)</td>
+</tr>
+<tr>
+<td data-label="At a glance">CSTA-style concepts</td>
+<td>Networks and the Internet (cybersecurity), Data and Analysis, Algorithms and Programming (functions as steps) (codes: see Concepts Lab Index, Part 4 <span class="vtag">[VERIFIED 2026-10-05]</span>)</td>
+</tr>
+<tr>
+<td data-label="At a glance">Time</td>
+<td>15-minute and 45-minute versions</td>
+</tr>
+<tr>
+<td data-label="At a glance">Cost and tech</td>
+<td>Paper, pencil, a printed word list. Optional calculator. No devices.</td>
+</tr>
+<tr>
+<td data-label="At a glance">Teachers do it first</td>
+<td>Yes. Part A takes about 20 minutes.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout boost" role="group" aria-label="Try This Now"><p class="co-label"><img class="co-icon" src="../assets/icons/icon_kind_and_well_ink-only.svg" alt="" width="28" height="28"><span>Try This Now</span></p><p><strong>Try This Now (60 seconds, no prep):</strong> Pair up. Use the recipe in Section 3 on the word "dog": start at 7; for each letter multiply by 3, add its number (a=1 ... z=26), keep the last two digits. Your partner checks you both get the same two-digit "fingerprint". Can either of you get from the fingerprint back to the word without just trying words?</p></div>
+<h2 id="1-the-big-idea"><span class="num">1.</span> <span class="htitle">The big idea</span><a class="anchor" href="#1-the-big-idea" aria-label="Link to this section: 1. The big idea">#</a></h2>
+<p>If a website kept your password in a file, anyone who stole the file would have everyone's passwords. So good systems keep only a <strong>fingerprint</strong> of the password. The fingerprint is made by a recipe called a <strong>hash function</strong>. When you log in, the site makes a fingerprint of what you typed and checks whether it matches the saved one. The site can say "yes, that's the right password" without ever remembering it.</p>
+<p>The key properties:</p>
+<ol>
+<li><strong>Same input, same fingerprint, every time.</strong></li>
+<li><strong>Easy to make, practically impossible to run backward.</strong> You cannot "un-blend" a smoothie.</li>
+<li><strong>A tiny change gives a totally different fingerprint.</strong> (cat vs car)</li>
+<li><strong>Fixed size.</strong> A word or a movie gives the same length of fingerprint.</li>
+</ol>
+<p>And one big honest caveat for teachers: <strong>hashing does not make a weak password strong.</strong> If your password is on a list of common passwords, an attacker can fingerprint every word on the list and see which one matches. That is why Demo 1 (long, random) and this demo (store fingerprints, add salt, use slow recipes) work together.</p>
+<h3 id="intro-2-what-a-teacher-should-know-plain-language"><span class="num">2.</span> <span class="htitle">What a teacher should know (plain language)</span><a class="anchor" href="#intro-2-what-a-teacher-should-know-plain-language" aria-label="Link to this section: 2. What a teacher should know (plain language)">#</a></h3>
+<h4 id="intro-2-1-hashing-encryption-and-encoding-are-three-different-thin">2.1 Hashing, encryption and encoding are three different things<a class="anchor" href="#intro-2-1-hashing-encryption-and-encoding-are-three-different-thin" aria-label="Link to this section: 2.1 Hashing, encryption and encoding are three different things">#</a></h4>
+<div class="table-wrap"><table><caption class="sr-only">2.1 Hashing, encryption and encoding are three different things</caption>
+<thead>
+<tr>
+<th scope="col">Tool</th>
+<th scope="col">Reversible?</th>
+<th scope="col">Needs a key?</th>
+<th scope="col">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Tool">Encoding (for example Base64)</td>
+<td data-label="Reversible?">Yes, by anyone</td>
+<td data-label="Needs a key?">No</td>
+<td data-label="Purpose">Change format. Not secret at all.</td>
+</tr>
+<tr>
+<td data-label="Tool">Encryption (Demo 4)</td>
+<td data-label="Reversible?">Yes, with the key</td>
+<td data-label="Needs a key?">Yes</td>
+<td data-label="Purpose">Keep a message secret but still readable later by the right person.</td>
+</tr>
+<tr>
+<td data-label="Tool">Hashing</td>
+<td data-label="Reversible?">No (by design)</td>
+<td data-label="Needs a key?">No (not a secret recipe)</td>
+<td data-label="Purpose">Make a fingerprint: check a password, check a file has not changed.</td>
+</tr>
+</tbody>
+</table></div>
+<p>News stories often say "the passwords were encrypted" when the correct word is usually "hashed." The difference matters: encrypted data can be decrypted by anyone who has the key; hashed passwords are never "decrypted," only guessed.</p>
+<h4 id="intro-2-2-real-hash-functions">2.2 Real hash functions<a class="anchor" href="#intro-2-2-real-hash-functions" aria-label="Link to this section: 2.2 Real hash functions">#</a></h4>
+<ul>
+<li><strong>SHA-256</strong> makes a 256-bit fingerprint (64 hexadecimal characters). The number of possible fingerprints is about 1.16 x 10^77 [RECOMPUTED 2026-10-05: 2^256 = 1.158 x 10^77, a 78-digit number], so accidental matches (collisions) are not a practical worry.</li>
+<li>Real example of "tiny change, totally different fingerprint" (SHA-256, computed with a standard tool):<ul>
+<li>"cat" starts 77af778b...</li>
+<li>"car" starts 2b2961a4...</li>
+<li>"Cat" starts 48735c4f...</li>
+</ul>
+</li>
+<li><strong>Old hashes are retired.</strong> MD5 and SHA-1 have known collision weaknesses and should not be used for security <span class="vtag">[VERIFIED 2026-10-05: NIST says SHA-1 should be phased out by December 31, 2030 in favor of SHA-2 and SHA-3, and shattered.io documents the first SHA-1 collision in February 2017]</span>.</li>
+<li><strong>Password storage should use deliberately slow, salted hashing</strong>: algorithms such as Argon2, scrypt, bcrypt or PBKDF2 (the OWASP Password Storage Cheat Sheet is a plain reference) <span class="vtag">[VERIFIED 2026-10-05: OWASP lists Argon2id first (minimum 19 MiB memory, 2 iterations, 1 degree of parallelism), then scrypt, bcrypt for legacy systems (work factor 10 or more) and PBKDF2 where FIPS compliance is needed (600,000 or more iterations with HMAC-SHA-256)]</span>. Slow is a feature: it makes billions-per-second guessing (Demo 1) cost much more. Plain SHA-256 is fast, so it suits checksums but is not by itself a good password-storage method.</li>
+</ul>
+<h4 id="intro-2-3-salt-in-one-picture">2.3 Salt, in one picture<a class="anchor" href="#intro-2-3-salt-in-one-picture" aria-label="Link to this section: 2.3 Salt, in one picture">#</a></h4>
+<p>A <strong>salt</strong> is a random extra bit of text added to each person's password before hashing, stored next to the fingerprint (it is not secret). Without salt, two people with the same password get the same fingerprint, and an attacker can prepare one big list of fingerprints for common words ahead of time (often called a "lookup table", or in a famous variant a "rainbow table"). With a unique salt per user, the prepared list is useless and every user's password has to be attacked separately. Salt does not make a weak password strong; it stops mass shortcuts.</p>
+<h4 id="intro-2-4-other-everyday-uses-of-hashes">2.4 Other everyday uses of hashes<a class="anchor" href="#intro-2-4-other-everyday-uses-of-hashes" aria-label="Link to this section: 2.4 Other everyday uses of hashes">#</a></h4>
+<ul>
+<li><strong>File integrity.</strong> Download pages sometimes publish a checksum. Your computer makes a fingerprint of the download; if it matches, the file did not change on the way [a checksum posted on the same compromised site does not prove authenticity; digital signatures do; standard security reasoning].</li>
+<li><strong>Breach checks.</strong> Services can tell you whether your password appears in known breaches without learning your password, by comparing partial fingerprints (the approach used by "Have I Been Pwned" Pwned Passwords: only the first 5 characters of the password's SHA-1 fingerprint are sent, and the service returns all matching endings) <span class="vtag">[VERIFIED 2026-10-05: haveibeenpwned.com/API/v3]</span>.</li>
+</ul>
+<h4 id="intro-2-5-common-misconceptions">2.5 Common misconceptions<a class="anchor" href="#intro-2-5-common-misconceptions" aria-label="Link to this section: 2.5 Common misconceptions">#</a></h4>
+<div class="table-wrap"><table><caption class="sr-only">2.5 Common misconceptions</caption>
+<thead>
+<tr>
+<th scope="col">Myth</th>
+<th scope="col">Better understanding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Myth">"If it's hashed, it's safe."</td>
+<td data-label="Better understanding">Only as safe as the password is hard to guess. Weak passwords fall to guessing.</td>
+</tr>
+<tr>
+<td data-label="Myth">"Hashing and encryption are the same."</td>
+<td data-label="Better understanding">Encryption is reversible with a key; hashing is one-way.</td>
+</tr>
+<tr>
+<td data-label="Myth">"A hash tells you nothing about the input."</td>
+<td data-label="Better understanding">It reveals when two inputs are identical, which is exactly why unsalted lookup tables work.</td>
+</tr>
+<tr>
+<td data-label="Myth">"Hash collisions mean it's broken."</td>
+<td data-label="Better understanding">Collisions must exist (infinite inputs, finite outputs). Good hashes make finding one infeasible.</td>
+</tr>
+<tr>
+<td data-label="Myth">"Salt must be secret."</td>
+<td data-label="Better understanding">No. It just needs to be unique and random.</td>
+</tr>
+<tr>
+<td data-label="Myth">"Websites should email you your password."</td>
+<td data-label="Better understanding">A site that can email your password is storing it in readable form. Red flag.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="intro-3-materials-zero-to-low-cost"><span class="num">3.</span> <span class="htitle">Materials (zero to low cost)</span><a class="anchor" href="#intro-3-materials-zero-to-low-cost" aria-label="Link to this section: 3. Materials (zero to low cost)">#</a></h3>
+<ul>
+<li>The <strong>Fingerprint Recipe card</strong> (below), one per pair.</li>
+<li>The <strong>Class Word List</strong> (16 words, below), one printed per pair.</li>
+<li>Index cards or strips of paper for "secret words" (students choose from the Class Word List so we never use real passwords).</li>
+<li>A large "Ledger" sheet of chart paper or whiteboard with three columns: Name, Fingerprint, Salt.</li>
+<li>Pencil, calculator (optional), a cup to hold folded secret slips.</li>
+</ul>
+<p><strong>The Toy Fingerprint Recipe (for grades 3 and up)</strong></p>
+<ol>
+<li>Turn each letter into a number: a=1, b=2, c=3 ... z=26.</li>
+<li>Start with the number <strong>7</strong>.</li>
+<li>For each letter in order: <strong>multiply your current number by 3, add the letter's number, then keep only the last two digits</strong> (divide by 100 and keep the remainder).</li>
+<li>The last two-digit number you reach is the <strong>fingerprint</strong>.</li>
+</ol>
+<p>Worked example, cat: start 7. c=3: 7x3+3 = 24. a=1: 24x3+1 = 73. t=20: 73x3+20 = 239, keep 39. <strong>Fingerprint of cat = 39.</strong><br>
+Check yourself: dog = 77.</p>
+<p><strong>Class Word List</strong> (16 words; printed on the student handout): cat, car, cot, dog, pizza, moon, sun, hat, tiger, robot, panda, cake, star, bike, fish, frog. The fingerprints are on the teacher answer page. Two pairs of words collide by accident, because there are only 100 possible fingerprints. That is the toy's weakness and a perfect teaching moment (Part B).</p>
+<p><strong>Toy salt rule.</strong> Put the salt letter in front of the word before hashing. Same word, different salt letter, different fingerprint (examples on the teacher answer page).</p>
+<p>Teacher note: this toy is <strong>not secure</strong>. It exists to make the ideas physical. Say so clearly: "Real fingerprints are 64 characters long, not two digits."</p>
+<h3 id="intro-4-part-a-teachers-do-it-first-about-20-minutes"><span class="num">4.</span> <span class="htitle">Part A: Teachers do it first (about 20 minutes)</span><a class="anchor" href="#intro-4-part-a-teachers-do-it-first-about-20-minutes" aria-label="Link to this section: 4. Part A: Teachers do it first (about 20 minutes)">#</a></h3>
+<ol>
+<li><strong>Learn the recipe (5 min).</strong> Compute "cat", "dog" and "moon" by hand and check the answer page. You cannot work backwards from 77 to "dog" by arithmetic. You can only try words.</li>
+<li><strong>Register and log in (6 min).</strong> Each teacher picks a secret word from the list and writes name plus fingerprint on a shared Ledger. One teacher announces "I'm Pat, my password is cat"; the "booth keeper" fingerprints it and compares. Try a wrong word.</li>
+<li><strong>The Stolen Ledger (5 min).</strong> Imagine the ledger was stolen. Try to find a colleague's word by fingerprinting every word on the list. With 16 words it takes minutes; with long random passphrases it never ends (Demo 1).</li>
+<li><strong>Salt it (4 min).</strong> Re-register with a salt letter drawn from a bag. A prepared word-to-fingerprint cheat sheet no longer works, and two people with the same word now differ.</li>
+</ol>
+<h3 id="intro-5-part-b-teaching-it"><span class="num">5.</span> <span class="htitle">Part B: Teaching it</span><a class="anchor" href="#intro-5-part-b-teaching-it" aria-label="Link to this section: 5. Part B: Teaching it">#</a></h3>
+<h4 id="intro-15-minute-version">15-minute version<a class="anchor" href="#intro-15-minute-version" aria-label="Link to this section: 15-minute version">#</a></h4>
+<div class="table-wrap"><table><caption class="sr-only">15-minute version</caption>
+<thead>
+<tr>
+<th scope="col">Minutes</th>
+<th scope="col">What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Minutes">0-2</td>
+<td data-label="What happens">Hook: the teacher reads the script. Introduce the Fingerprint Recipe (or the smoothie machine for grades K-2).</td>
+</tr>
+<tr>
+<td data-label="Minutes">2-5</td>
+<td data-label="What happens">Teach by example: compute "cat" together on the board.</td>
+</tr>
+<tr>
+<td data-label="Minutes">5-9</td>
+<td data-label="What happens">Register and login round: students pick a word, compute, post fingerprint on the Ledger. Test two logins.</td>
+</tr>
+<tr>
+<td data-label="Minutes">9-12</td>
+<td data-label="What happens">The Stolen Ledger: "A burglar took the ledger!" Teams race to find who has which word. Debrief: weak, common words fall fast.</td>
+</tr>
+<tr>
+<td data-label="Minutes">12-15</td>
+<td data-label="What happens">Salt: apply a one-letter salt and see the fingerprints change. Exit slip.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="intro-45-minute-version">45-minute version<a class="anchor" href="#intro-45-minute-version" aria-label="Link to this section: 45-minute version">#</a></h4>
+<div class="table-wrap"><table><caption class="sr-only">45-minute version</caption>
+<thead>
+<tr>
+<th scope="col">Minutes</th>
+<th scope="col">What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Minutes">0-5</td>
+<td data-label="What happens">Hook and smoothie warm-up (below).</td>
+</tr>
+<tr>
+<td data-label="Minutes">5-15</td>
+<td data-label="What happens">Learn and practice the recipe; students compute five words; check and correct mistakes.</td>
+</tr>
+<tr>
+<td data-label="Minutes">15-25</td>
+<td data-label="What happens">Register, login test, wrong-password test. Discuss: "How does the booth know you're right without a copy of your word?"</td>
+</tr>
+<tr>
+<td data-label="Minutes">25-33</td>
+<td data-label="What happens">The Stolen Ledger race: teams compete for speed in decoding the ledger. Debrief on weak passwords and list size.</td>
+</tr>
+<tr>
+<td data-label="Minutes">33-40</td>
+<td data-label="What happens">Collisions: show cot and star both give 81. Why does this happen with 100 fingerprints? How many would we need? Introduce real SHA-256 examples (cat vs car vs Cat) on the board. Salt round.</td>
+</tr>
+<tr>
+<td data-label="Minutes">40-45</td>
+<td data-label="What happens">Exit ticket and handout.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Smoothie warm-up (all bands, 3 minutes).</strong> Show three index cards labeled "strawberry + banana", "strawberry + mango", "strawberry + banana" (again). Say: "A smoothie machine (the hash) turns a recipe into a color: pink-banana, orange, pink-banana. Same recipe, same color. Can anyone look at a pink smoothie and say exactly what recipe it was?" Discuss: "No, but if I tell you the choices, you can try each."</p>
+<h3 id="intro-6-teacher-script"><span class="num">6.</span> <span class="htitle">Teacher script</span><a class="anchor" href="#intro-6-teacher-script" aria-label="Link to this section: 6. Teacher script">#</a></h3>
+<p><strong>Hook (2 minutes).</strong> "I have a secret word and I'm going to prove I know it without ever telling you or writing it down. Here's the trick: I'm going to use a recipe that turns any word into a two-digit number, like a fingerprint. If I give you the fingerprint, you can check that my word is right, but you can't easily work out the word. Today we are the website's computer, and we find out why websites store fingerprints, not passwords."</p>
+<p><strong>After the Stolen Ledger.</strong> "The burglar had a list of fingerprints. They could try each word on a list and compare. That is exactly what happens in real life when a company is breached, only with billions of tries. Which of your classmates' secret words got found fastest? The common ones. That's why Demo 1's long random passphrases matter, and why companies use salts."</p>
+<p><strong>On collisions.</strong> "Our toy has only 100 fingerprints, so different words can share one. A real SHA-256 fingerprint has about 10^77 possibilities (a number with 78 digits), compared with a commonly cited estimate of about 10^80 atoms in the observable universe [commonly cited estimate; not checked against a primary source], so accidents basically don't happen. That's why real ones are 64 characters long."</p>
+<p><strong>Close.</strong> "A website that can email you your password is storing it in the open. A good website stores only fingerprints, with salt, made by a slow recipe, and checks yours when you log in. You can help by choosing a long, random passphrase and a different one for each site. If you ever get a message that your account was in a breach, it's not your fault; change that password and tell a trusted adult."</p>
+<h3 id="intro-7-kid-friendly-analogies-by-band"><span class="num">7.</span> <span class="htitle">Kid-friendly analogies by band</span><a class="anchor" href="#intro-7-kid-friendly-analogies-by-band" aria-label="Link to this section: 7. Kid-friendly analogies by band">#</a></h3>
+<div class="table-wrap"><table><caption class="sr-only">7. Kid-friendly analogies by band</caption>
+<thead>
+<tr>
+<th scope="col">Band</th>
+<th scope="col">Analogy and activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Band">K-2</td>
+<td data-label="Analogy and activity"><strong>The smoothie machine.</strong> The same fruit makes the same color. You cannot un-blend it. Play "guess the fruits": the teacher shows only the smoothie color card and the class guesses which recipe from three choices.</td>
+</tr>
+<tr>
+<td data-label="Band">3-5</td>
+<td data-label="Analogy and activity"><strong>The fingerprint booth.</strong> Teacher or helper runs the recipe; students post fingerprints; the "burglar" gets the ledger and tries words. Add salt as a "secret sprinkle" that changes the color for each person.</td>
+</tr>
+<tr>
+<td data-label="Band">6-8</td>
+<td data-label="Analogy and activity"><strong>Hash, collision, salt.</strong> Compute by hand, find collisions (cot and star), discuss why more fingerprints means fewer collisions, and why salting matters. Introduce "avalanche": one letter changes everything in real hashes.</td>
+</tr>
+<tr>
+<td data-label="Band">9-12</td>
+<td data-label="Analogy and activity"><strong>Storage design and attack economics.</strong> Slow hashes (Argon2, bcrypt), salts and peppers (a pepper is a secret value kept outside the password database; OWASP's Password Storage Cheat Sheet has a "Peppering" section) <span class="vtag">[VERIFIED 2026-10-05: cheatsheetseries.owasp.org]</span>, breach response, checksum vs signature, why "we encrypt your passwords" is a weaker claim than "we hash them with a slow, salted algorithm".</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="intro-8-discussion-questions"><span class="num">8.</span> <span class="htitle">Discussion questions</span><a class="anchor" href="#intro-8-discussion-questions" aria-label="Link to this section: 8. Discussion questions">#</a></h3>
+<ol>
+<li>How can the booth check your password without keeping it?</li>
+<li>Why did the burglar find some words quickly and others slowly?</li>
+<li>If two people pick the same word, why should their fingerprints still be different?</li>
+<li>(9-12) Why do systems deliberately use <em>slow</em> hashing for passwords but <em>fast</em> hashing for file checksums?</li>
+</ol>
+<h3 id="intro-9-level-up-challenge"><span class="num">9.</span> <span class="htitle">Level-up challenge</span><a class="anchor" href="#intro-9-level-up-challenge" aria-label="Link to this section: 9. Level-up challenge">#</a></h3>
+<ul>
+<li><strong>Find a collision.</strong> Find two <em>different</em> three-letter words with the same fingerprint, then explain why finding one for SHA-256 is thought infeasible while ours takes minutes (a bigger fingerprint). This teaches nothing about attacking a real system.</li>
+<li><strong>Spot the policy.</strong> A pretend privacy policy says "we store your password so we can email it if you forget." Students write a one-sentence critique and say what the company should do.</li>
+</ul>
+<h3 id="intro-10-safety-and-ethics-notes-defense-only"><span class="num">10.</span> <span class="htitle">Safety and ethics notes (defense only)</span><a class="anchor" href="#intro-10-safety-and-ethics-notes-defense-only" aria-label="Link to this section: 10. Safety and ethics notes (defense only)">#</a></h3>
+<ul>
+<li>The "burglar" role is a <strong>thinking role</strong> with a list on paper, never a real attack on real accounts. Do not use real passwords at any time; all secret words come from the Class Word List.</li>
+<li>Do not show or teach cracking tools or run them against any real hash. Students learn why guessing works so they choose better passwords, not how to attack databases. If someone says the toy "proves hashing is breakable," clarify that it shows weak secrets and tiny spaces are breakable.</li>
+<li>If a student asks "can I crack someone's password?" redirect: "Only with permission and for defense. Let's talk about ethical hacking in Demo 14."</li>
+<li>Keep the "burglar" friendly (a silly cartoon), not a scary stranger. Hackles up? Pause. Check. Tell.</li>
+</ul>
+<h3 id="intro-11-assessment-idea"><span class="num">11.</span> <span class="htitle">Assessment idea</span><a class="anchor" href="#intro-11-assessment-idea" aria-label="Link to this section: 11. Assessment idea">#</a></h3>
+<ul>
+<li><strong>Exit ticket.</strong> "Why can a website check your password without keeping it? Use the word 'fingerprint'." Rubric: 3 = same word gives same fingerprint, can't reverse, site compares; 2 = says "it's scrambled"; 1 = says "it's encrypted so no one can see".</li>
+<li><strong>Performance task (6-12).</strong> Give a short ledger (names, fingerprints, salt) and a word list; students recover the secret words, then write one paragraph explaining why salt slowed them down and what the company should do about weak passwords.</li>
+</ul>
+<h3 id="intro-12-sources-and-verify-list"><span class="num">12.</span> <span class="htitle">Sources and [VERIFY] list</span><a class="anchor" href="#intro-12-sources-and-verify-list" aria-label="Link to this section: 12. Sources and [VERIFY] list">#</a></h3>
+<ul>
+<li>NIST FIPS 180-4 (SHA-2 family; final August 2015) <span class="vtag">[VERIFIED 2026-10-05: csrc.nist.gov]</span>.</li>
+<li>OWASP Password Storage Cheat Sheet (Argon2id, bcrypt, scrypt, PBKDF2 guidance) <span class="vtag">[VERIFIED 2026-10-05]</span>.</li>
+<li>NIST SP 800-63B-4 (final August 2025), password verification guidance <span class="vtag">[VERIFIED in Round 1: pages.nist.gov/800-63-4]</span>.</li>
+<li>MD5 and SHA-1 collision weaknesses (CWI/Google 2017 "SHAttered" for SHA-1 <span class="vtag">[VERIFIED 2026-10-05: shattered.io]</span>; earlier results for MD5 [not checked]).</li>
+<li>Troy Hunt's "Have I Been Pwned" k-anonymity range search for password checks <span class="vtag">[VERIFIED 2026-10-05: haveibeenpwned.com/API/v3; the project's author attribution was not re-checked]</span>.</li>
+<li>Inspiration for unplugged cryptography activities: CS Unplugged (University of Canterbury, New Zealand; content shared under CC BY-SA 4.0 <span class="vtag">[VERIFIED 2026-10-05: csunplugged.org]</span>), cryptography and information-hiding activities. This demo is an original design, not a copy; check the specific activity name and license before adapting any CS Unplugged content directly.</li>
+</ul>
+<h2 id="student-handout-mystery-fingerprints" class="chapter">Student Handout: Mystery Fingerprints<a class="anchor" href="#student-handout-mystery-fingerprints" aria-label="Link to this section: Student Handout: Mystery Fingerprints">#</a></h2>
+<p><strong>Name: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</strong></p>
+<h3 id="c1-the-big-idea">The big idea<a class="anchor" href="#c1-the-big-idea" aria-label="Link to this section: The big idea">#</a></h3>
+<p>A website keeps a <strong>fingerprint</strong> of your password, not the password. When you log in, it makes a fingerprint of what you type and checks for a match.</p>
+<h3 id="c1-the-recipe-toy-fingerprint-machine">The recipe (Toy Fingerprint Machine)<a class="anchor" href="#c1-the-recipe-toy-fingerprint-machine" aria-label="Link to this section: The recipe (Toy Fingerprint Machine)">#</a></h3>
+<ol>
+<li>Letters become numbers: a=1, b=2, c=3 ... z=26.</li>
+<li>Start at <strong>7</strong>.</li>
+<li>For each letter: <strong>multiply by 3, add the letter number, keep the last two digits.</strong></li>
+</ol>
+<p>Example: <strong>cat</strong> gives 7, then 24, then 73, then 39. Fingerprint = <strong>39</strong>.</p>
+<p><strong>Class Word List:</strong> cat, car, cot, dog, pizza, moon, sun, hat, tiger, robot, panda, cake, star, bike, fish, frog</p>
+<h3 id="c1-your-turn">Your turn<a class="anchor" href="#c1-your-turn" aria-label="Link to this section: Your turn">#</a></h3>
+<p>Show your work in the margin.</p>
+<div class="table-wrap"><table><caption class="sr-only">Your turn</caption>
+<thead>
+<tr>
+<th scope="col">Word</th>
+<th scope="col">Fingerprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Word">dog</td>
+<td data-label="Fingerprint">____ (check: 77)</td>
+</tr>
+<tr>
+<td data-label="Word">moon</td>
+<td data-label="Fingerprint">____</td>
+</tr>
+<tr>
+<td data-label="Word">fish</td>
+<td data-label="Fingerprint">____</td>
+</tr>
+<tr>
+<td data-label="Word">bike</td>
+<td data-label="Fingerprint">____</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="c1-the-stolen-ledger">The Stolen Ledger<a class="anchor" href="#c1-the-stolen-ledger" aria-label="Link to this section: The Stolen Ledger">#</a></h3>
+<p>Your teacher posts a ledger of names and fingerprints. Fingerprint every word on the Class Word List, then find who has which secret word:</p>
+<div class="table-wrap"><table><caption class="sr-only">The Stolen Ledger</caption>
+<thead>
+<tr>
+<th scope="col">Fingerprint</th>
+<th scope="col">Which word?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Fingerprint">53</td>
+<td data-label="Which word?"><strong><em>_</em></strong>_____</td>
+</tr>
+<tr>
+<td data-label="Fingerprint">12</td>
+<td data-label="Which word?"><strong><em>_</em></strong>_____</td>
+</tr>
+<tr>
+<td data-label="Fingerprint">43</td>
+<td data-label="Which word?"><strong><em>_</em></strong>_____</td>
+</tr>
+<tr>
+<td data-label="Fingerprint">95</td>
+<td data-label="Which word?"><strong><em>_</em></strong>_____</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="c1-add-salt">Add salt!<a class="anchor" href="#c1-add-salt" aria-label="Link to this section: Add salt!">#</a></h3>
+<p>Salt = a random extra letter in front of the word. Compute the fingerprint of <strong>kcat</strong>: <strong><em>_ . Is it the same as <strong>cat</strong> (39)? </em></strong>_</p>
+<h3 id="c1-think-about-it">Think about it<a class="anchor" href="#c1-think-about-it" aria-label="Link to this section: Think about it">#</a></h3>
+<ol>
+<li>Can you work backward from 53 to the word using arithmetic? ____</li>
+<li>Two different words on the list give the same fingerprint (81). What are they? <strong><em>_ and </em></strong>_</li>
+<li>A real fingerprint is 64 characters long. Why does a longer fingerprint mean fewer accidental twins?</li>
+</ol>
+<h3 id="c1-remember">Remember<a class="anchor" href="#c1-remember" aria-label="Link to this section: Remember">#</a></h3>
+<ul>
+<li>Hashing is one-way. Encryption is reversible with a key.</li>
+<li>Weak, common passwords are found quickly even if hashed. Make yours <strong>long and random</strong>.</li>
+<li>If your password is ever stolen or in a breach, it is <strong>not your fault</strong>. Change it and tell a trusted adult.</li>
+</ul>
+<p><em>End of student handout.</em></p>
+<nav class="chapnav" aria-label="Move between sections of this guide"><a class="up" href="#page-toc">Back to top of this page</a><a class="next" href="#teacher-copy-only-answers-for-demo-2-do-not-distribute-to-st"><span class="dir">Next &rarr;</span> TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)</a></nav>
+<h2 id="teacher-copy-only-answers-for-demo-2-do-not-distribute-to-st" class="chapter">TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)<a class="anchor" href="#teacher-copy-only-answers-for-demo-2-do-not-distribute-to-st" aria-label="Link to this section: TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)">#</a></h2>
+<blockquote><p><strong>WARNING: Teacher page. Remove before copying.</strong> The student handout ends on the page before this one. Print the handout pages only, or detach this page first. Do not post it, project it or send it home.</p></blockquote>
+<p><strong>Master fingerprints (toy recipe, verified):</strong></p>
+<div class="table-wrap"><table><caption class="sr-only">TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)</caption>
+<thead>
+<tr>
+<th scope="col">Word</th>
+<th scope="col">Fingerprint</th>
+<th scope="col">Word</th>
+<th scope="col">Fingerprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Word">cat</td>
+<td data-label="Fingerprint">39</td>
+<td data-label="Word">tiger</td>
+<td data-label="Fingerprint">60</td>
+</tr>
+<tr>
+<td data-label="Word">car</td>
+<td data-label="Fingerprint">37</td>
+<td data-label="Word">robot</td>
+<td data-label="Fingerprint">47</td>
+</tr>
+<tr>
+<td data-label="Word">cot</td>
+<td data-label="Fingerprint">81</td>
+<td data-label="Word">panda</td>
+<td data-label="Fingerprint">63</td>
+</tr>
+<tr>
+<td data-label="Word">dog</td>
+<td data-label="Fingerprint">77</td>
+<td data-label="Word">cake</td>
+<td data-label="Fingerprint">95</td>
+</tr>
+<tr>
+<td data-label="Word">pizza</td>
+<td data-label="Fingerprint">53</td>
+<td data-label="Word">star</td>
+<td data-label="Fingerprint">81</td>
+</tr>
+<tr>
+<td data-label="Word">moon</td>
+<td data-label="Fingerprint">12</td>
+<td data-label="Word">bike</td>
+<td data-label="Fingerprint">40</td>
+</tr>
+<tr>
+<td data-label="Word">sun</td>
+<td data-label="Fingerprint">37</td>
+<td data-label="Word">fish</td>
+<td data-label="Fingerprint">75</td>
+</tr>
+<tr>
+<td data-label="Word">hat</td>
+<td data-label="Fingerprint">84</td>
+<td data-label="Word">frog</td>
+<td data-label="Fingerprint">43</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Accidental twins:</strong> cot and star both give 81; car and sun both give 37. With only 100 possible fingerprints, collisions are common.</p>
+<p><strong>Salt examples:</strong> kcat = 14, mcat = 68, qcat = 76 (cat alone = 39).</p>
+<p><strong>Handout answers:</strong> moon 12, fish 75, bike 40. Ledger: 53 pizza, 12 moon, 43 frog, 95 cake. kcat = 14, not the same as cat (39). Think about it: 1 No, you can only try words; 2 cot and star; 3 more possible fingerprints means two words are much less likely to share one.</p>
+<p><strong>Real SHA-256 examples (computed with a standard tool):</strong> cat 77af778b..., car 2b2961a4..., Cat 48735c4f... One changed letter, a completely different fingerprint.</p>
+<nav class="chapnav" aria-label="Move between sections of this guide"><a class="prev" href="#student-handout-mystery-fingerprints"><span class="dir">&larr; Previous</span> Student Handout: Mystery Fingerprints</a><a class="up" href="#page-toc">Back to top of this page</a></nav></article>
+<nav class="docnav" aria-label="Documents in this folder"><a class="prev" href="Demo_01_Long_Passphrases.html" lang="en"><span class="dir">&larr; Previous document</span> Demo 1: Why Long Passphrases Win (The Dice Crack-Timer)</a><a class="next" href="Demo_03_Anatomy_of_a_Phish.html" lang="en"><span class="dir">Next document &rarr;</span> Demo 3: Anatomy of a Phish (Annotate the Fake)</a></nav>
+</main>
+<aside class="tocside" aria-label="On this page"><nav class="toc" id="page-toc" aria-labelledby="toc-h" tabindex="-1"><p class="toc-h" id="toc-h">On this page</p><ul><li><a href="#1-the-big-idea">1. The big idea</a><details open><summary>Sections (11)</summary><ul><li><a href="#intro-2-what-a-teacher-should-know-plain-language">2. What a teacher should know (plain language)</a></li><li><a href="#intro-3-materials-zero-to-low-cost">3. Materials (zero to low cost)</a></li><li><a href="#intro-4-part-a-teachers-do-it-first-about-20-minutes">4. Part A: Teachers do it first (about 20 minutes)</a></li><li><a href="#intro-5-part-b-teaching-it">5. Part B: Teaching it</a></li><li><a href="#intro-6-teacher-script">6. Teacher script</a></li><li><a href="#intro-7-kid-friendly-analogies-by-band">7. Kid-friendly analogies by band</a></li><li><a href="#intro-8-discussion-questions">8. Discussion questions</a></li><li><a href="#intro-9-level-up-challenge">9. Level-up challenge</a></li><li><a href="#intro-10-safety-and-ethics-notes-defense-only">10. Safety and ethics notes (defense only)</a></li><li><a href="#intro-11-assessment-idea">11. Assessment idea</a></li><li><a href="#intro-12-sources-and-verify-list">12. Sources and [VERIFY] list</a></li></ul></details></li><li><a href="#student-handout-mystery-fingerprints">Student Handout: Mystery Fingerprints</a><details open><summary>Sections (7)</summary><ul><li><a href="#c1-the-big-idea">The big idea</a></li><li><a href="#c1-the-recipe-toy-fingerprint-machine">The recipe (Toy Fingerprint Machine)</a></li><li><a href="#c1-your-turn">Your turn</a></li><li><a href="#c1-the-stolen-ledger">The Stolen Ledger</a></li><li><a href="#c1-add-salt">Add salt!</a></li><li><a href="#c1-think-about-it">Think about it</a></li><li><a href="#c1-remember">Remember</a></li></ul></details></li><li><a href="#teacher-copy-only-answers-for-demo-2-do-not-distribute-to-st">TEACHER COPY ONLY: Answers for Demo 2 (do not distribute to students)</a></li></ul></nav></aside>
+</div>
+<footer class="site-footer">
+<div class="foot-inner">
+<p class="notice" lang="en">© 2026 Competence Collective. Lesson text and teaching materials: CC BY-NC 4.0 (free to print, share and adapt for non-commercial use with credit). The Hackles name, logos, characters and artwork are not covered by that license: print and share them unaltered for classroom and family use; any other use needs written permission. [VERIFY with counsel]</p>
+<p class="fine" lang="en">Hackles Reader. A free kit by Competence Collective, competencecollective.org. The whole kit is free at quillsup.org. This site sets no cookies, has no tracking and makes no network requests. Built 2026-10-05.</p>
+</div>
+</footer>
+<div class="print-footer" aria-hidden="true">Hackles · © 2026 Competence Collective · competencecollective.org · Text CC BY-NC 4.0 · Name, logos and art: all rights reserved · Pilot draft, reviewed by AI only</div>
+<script src="../assets/reader.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+PASS  t two-sided p, t=2.228139 df=10 is about .05
+PASS  t two-sided p, t=2.0 df=10 is about .0734
+PASS  t two-sided p, t=2.0 df=8 is about .0805
+PASS  t two-sided p, t=12.706 df=1 is about .05
+PASS  t quantile .975 df=10 is about 2.228
+PASS  paired t on 1..5: t=4.243, df=4, p=.0132
+PASS  Welch t on two shifted samples: t=2, df=8, p=.0805
+PASS  exact McNemar b=2, c=10 gives 158/4096
+PASS  exact McNemar with no discordant pairs gives 1
+PASS  sign-flip exact p for 1..5 is 2/32
+PASS  exact randomization p for a group difference of 2 sets of 3
+PASS  ICC is 1 when groups are internally identical and differ
+PASS  ICC is not positive when group means are equal
+PASS  design effect 1+(m-1)ICC
+PASS  Wilson interval for 12/24 is about 31 to 69
+PASS  n_paired(0.5)=34
+PASS  n_two_group(0.5)=64
+PASS  n_mcnemar(.25,.05)=57
+PASS  worked example from the Assessment Pack: 26/72 to 51/72 is +35 points
+PASS  worked example from Module 8: 11/24 to 17/22 is +31 points
+students rows: 341 | class tallies: 8 | candidate rows: 72
+students rows: 341 | class tallies: 8 | candidate rows: 72
+PASS  generator is reproducible (same seed, same files)
+PASS  class tally file has no student identifiers
+PASS  student-level file has codes only, no names
+PASS  taught-first classes gain more than delayed classes (synthetic truth)
+PASS  difference is in a plausible range for the invented truth (15 to 35 points)
+PASS  class bootstrap interval brackets the estimate
+PASS  exact randomization p with 4 v 4 classes cannot go below 2/70
+PASS  candidate mean confidence change is positive and bracketed by its interval
+PASS  student-level ICC is small and below 0.3 (class effect SD 0.25 was used)
+PASS  analysis output is deterministic
+PASS  groups under 10 students are suppressed
+
+All checks passed

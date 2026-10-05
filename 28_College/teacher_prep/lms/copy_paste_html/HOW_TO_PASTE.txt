@@ -1,0 +1,7 @@
+Copy-paste version
+==================
+Each .html file is a complete page with simple semantic HTML (headings, lists, tables with header cells) and a small inline style block.
+To use in any LMS: open a file in a browser or text editor, copy everything inside the <main> element, and paste into your LMS page editor (use the HTML or source view if it has one).
+Most LMS editors strip the style block; the content stays readable and accessible without it.
+Assignments, discussion prompts and quiz self-checks are written into each week page. Set dates, points and weights in your LMS (see the Weighted grading table in the syllabus).
+Not tested in every LMS. See lms/README_LMS_Shell.md for what was and was not tested.

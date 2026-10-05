@@ -1,0 +1,29 @@
+# Hackles download checksums (SHA-256)
+# Created 2026-10-05 by tools/make_checksums.py. Format: <sha256>  <file name>
+# Verify with: sha256sum -c CHECKSUMS.txt   or   shasum -a 256 -c CHECKSUMS.txt   (run in the folder that holds the zips)
+# Windows: Get-FileHash -Algorithm SHA256 <file>   or   certutil -hashfile <file> SHA256
+# A matching value shows your copy is the same as the one listed here. It does not show the content is accurate or approved.
+# Get this list from a different place than the files (for example the publisher's page and your own saved copy of this pack).
+
+39e16e3ca8e852eb2b6caeec8392184a473aa2fb26d370f87007f099c2f669e9  Hackles_3-5.zip
+1cd9b7782ced9fffb0ad9b7b20fc4614765802407d3256d662521665b240c3bf  Hackles_6-8.zip
+4260db1ee34017ace19ea5ca864ae0816c92a960252c09bf9714f52c03c16c67  Hackles_9-12.zip
+36696abee25a5eced4c54bf917c1ee5f57abea8dfc95cb369198a1198135d867  Hackles_Admin_Pack.zip
+d4d8462447a513f1d1728d9d3f1934dc41307598c710743d6d13554cc98a3f5a  Hackles_Clubs.zip
+597f84480163cec55d19e43c7e6f170752cffa14939b0000bc5866f77b5d198c  Hackles_College_Edition.zip
+73b85421eaf36c579915b0fa89889d701dff1104e3fabceadf2c1e2b64eef63e  Hackles_Coloring_and_Activity_Books.zip
+be3dc0c8d3f435d9647f26064901bef4496f63829a0620fab2dbda56cb9cc62a  Hackles_Concepts_Lab.zip
+346e2b3ada5464bbd558002032da5f0b93ebdddf28f7260c7249c8fc1fcd9e17  Hackles_Espanol_Borrador.zip
+ba508d60c73fd5a77bf251612935d04502e6f4c1fdde16c68788e2603f3117ab  Hackles_Everything.zip
+cba11895527db90f3a0fbb6dbcf0c227c4a26206124f9d7879c365b083158ea9  Hackles_Facilitator_Kit.zip
+91efeba2477d3282d4ee8cf9a5ace41383e3582a9b13348a378c7c9183bca331  Hackles_Family_Pack.zip
+aaab316ea5602d0a64f3b0b12e9604134548e010d0c10a32259c99436a782166  Hackles_Florida_Pack.zip
+29900d09261891509f5f4bed0ec69f4566b26fdc0d6421f357bcc3738146e8ac  Hackles_Games_and_Fun.zip
+916ab64e52fb12c1c17235f79b5502fb0dceec86cc37dc2a4508b97700be19eb  Hackles_K-2.zip
+f0eb3111bf69d43df190d1bd58bc69aae6b8fd5e0b3e26de3dc0dbdf88706ab0  Hackles_Lab.zip
+7e5b3579471676d4930f1a22b27ff3ef11088baae1b370853bc661a938704dfe  Hackles_Lesson_Cards.zip
+a6d414783ac003b2c5aa55d7d2514250fabd9a0d67400bc4ec4ae399a483e12f  Hackles_Reader.zip
+b4e4e68a3118d1cbeee9944bd691c49bd85928657e8c3b7a96cba1382bf75a33  Hackles_Slides.zip
+c27b9b17ef21cc38419c484c9ed0c2e478fb7d62665e2ef3346560e598ae1743  Hackles_State_Atlas.zip
+6735cd0bf8d1b121987e7cdda8853b4ea9dc4002c209f7e6aa3cdd541ac8654c  Hackles_Teacher_Academy.zip
+5518e17358ebca33eca24480722ed6b8421bc20ef8ffa3652f7e1c5da6c2ca34  Hackles_Teacher_Support_and_Assessment.zip

@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 10: Screen Balance | Hackles slides</title>
+<meta name="description" content="Classroom slides for Lesson 10 of Hackles, Hackles: K-2 (Ages 5-7). Offline, no tracking.">
+<style>
+/* Hackles slide deck: Field Guide look. Stage is a fixed 1280x720 plate that JS scales to fit.
+   Type floor on the stage is 28px at 1280x720. No external requests; fonts are local files. */
+@font-face{font-family:"Fraunces";src:url("assets/fonts/Fraunces-VF.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("assets/fonts/Fraunces-Italic-VF.ttf") format("truetype");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("assets/fonts/SourceSerif4-VF.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("assets/fonts/SourceSerif4-Italic-VF.ttf") format("truetype");font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Caveat";src:url("assets/fonts/Caveat-VF.ttf") format("truetype");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Special Elite";src:url("assets/fonts/SpecialElite-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+
+:root{
+  --ink:#2B2D42; --tang:#FF8A3D; --tangtxt:#A8400A; --yel:#FFC93C; --slate:#2F6F73; --grey:#5A5C70;
+  --paper:#FAF4E4; --wash:#F2E9D2; --hl:#FBE7A6; --hair:#8C8672; --white:#FFFFFF;
+  --head:"Fraunces","Georgia","Cambria",serif;
+  --text:"Source Serif 4","Constantia","Palatino Linotype","Georgia",serif;
+  --label:"Special Elite","Courier New",monospace;
+  --hand:"Caveat","Ink Free","Segoe Print",cursive;
+  --fs-body:44px; --fs-big:58px; --fs-q:56px; --fs-title:84px; --fs-small:30px;
+}
+.band-k2{--fs-body:54px;--fs-big:70px;--fs-q:64px;--fs-title:92px;--fs-small:34px}
+.band-g35{--fs-body:48px;--fs-big:62px;--fs-q:58px;--fs-title:88px;--fs-small:32px}
+.band-g68,.band-g912{--fs-body:42px;--fs-big:56px;--fs-q:52px;--fs-title:80px;--fs-small:30px}
+/* junior skin: hand-lettered labels (short labels only) */
+.skin-junior{--label:"Caveat","Ink Free","Segoe Print",cursive}
+.skin-junior .lbl{font-size:44px;font-weight:700;letter-spacing:0;text-transform:none}
+.skin-journal .lbl{font-size:28px;letter-spacing:.08em;text-transform:uppercase}
+.calm{--tang:#2F6F73;--hl:#F2E9D2;--yel:#8C8672}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#1f2030;color:var(--ink);font-family:var(--text)}
+body{overflow:hidden}
+.skip{position:absolute;left:-9999px;top:0;background:var(--white);color:var(--ink);padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+.app{display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;height:100vh;height:100dvh}
+.stagewrap{grid-column:1;grid-row:1;position:relative;overflow:hidden;min-width:0;min-height:0}
+.stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:0 0;background:var(--paper);overflow:hidden}
+.notes-on .notespane{display:flex}
+.notespane{display:none;grid-column:2;grid-row:1;width:clamp(300px,34vw,520px);background:var(--white);color:var(--ink);flex-direction:column;border-left:4px solid var(--ink);min-height:0}
+.notespane h2{margin:0;padding:10px 16px;font:700 18px/1.2 var(--head);background:var(--ink);color:var(--white)}
+.notespane .nbody{padding:14px 18px 24px;overflow:auto;font:18px/1.5 var(--text);flex:1;min-height:0}
+.notespane .nbody p{margin:0 0 .8em;white-space:pre-wrap}
+.notespane .nbody .do{color:var(--slate);font-style:italic}
+.notespane .nbody .rem{background:var(--hl);border-left:6px solid var(--tangtxt);padding:6px 10px}
+.controls{grid-column:1/3;grid-row:2;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:#15161f;color:var(--white);font:16px/1 var(--text)}
+.controls button,.controls a{font:600 16px/1 var(--text);min-height:40px;min-width:44px;padding:0 14px;border:2px solid var(--white);border-radius:6px;background:transparent;color:var(--white);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.controls button:hover,.controls a:hover{background:var(--white);color:var(--ink)}
+.controls button[aria-pressed="true"]{background:var(--yel);color:var(--ink);border-color:var(--yel)}
+.controls .count{min-width:110px;text-align:center;font-weight:700}
+button:focus-visible,a:focus-visible,.stage:focus-visible,[tabindex]:focus-visible{outline:4px solid var(--yel);outline-offset:3px;box-shadow:0 0 0 7px var(--ink)}
+.stage button:focus-visible{outline-color:var(--ink);box-shadow:0 0 0 7px var(--yel)}
+:fullscreen .controls{opacity:0;position:absolute;left:0;right:0;bottom:0}
+:fullscreen .controls:focus-within,:fullscreen .controls.show{opacity:1}
+:fullscreen .app{grid-template-rows:1fr 0}
+@media (max-width:700px){.app{grid-template-columns:1fr}.notespane{grid-column:1;grid-row:2;width:auto;height:34vh;border-left:0;border-top:4px solid var(--ink)}.controls{grid-row:3;grid-column:1}.app{grid-template-rows:1fr auto auto}}
+
+/* ---------- slide plate */
+.slide{position:absolute;inset:0;display:none;background:var(--paper);color:var(--ink)}
+.slide.on{display:block}
+.slide::before{content:"";position:absolute;inset:14px;border:3px solid var(--ink);box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 8px var(--hair);pointer-events:none}
+.rh{position:absolute;left:56px;top:34px;right:260px;font:400 28px/1.1 var(--label);color:var(--slate);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.skin-junior .rh{font-size:36px;font-weight:700}
+.tab{position:absolute;right:30px;top:30px;min-width:150px;padding:6px 16px 8px;background:var(--tang);color:var(--ink);font:400 28px/1.1 var(--label);text-align:center;border:3px solid var(--ink);transform:rotate(-2deg)}
+.skin-junior .tab{font-size:36px;font-weight:700}
+.calm .tab{transform:none;background:var(--wash);color:var(--ink)}
+.main{position:absolute;left:64px;right:64px;top:108px;bottom:50px;display:flex;flex-direction:column;min-height:0}
+.has-img .main{right:380px}
+.picr{position:absolute;right:54px;bottom:60px;width:300px;height:300px}
+.picr img{width:100%;height:100%;object-fit:contain}
+.lbl{color:var(--tangtxt);font-family:var(--label);margin:0 0 10px}
+.fit{flex:1;min-height:0;overflow:hidden}
+h1,h2,h3{font-family:var(--head);margin:0;font-weight:800;line-height:1.05}
+.rule{height:8px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);margin:6px 0 18px;width:100%}
+p{margin:0}
+
+/* title */
+.k-title .main{top:96px}
+.k-title .kick{font:700 var(--fs-small)/1.1 var(--label);color:var(--tangtxt)}
+.skin-junior.k-title .kick{font-size:56px}
+.k-title h1{font-size:var(--fs-title);margin:6px 0 14px;max-width:880px}
+.k-title .strand{display:flex;align-items:center;gap:18px;font:600 36px/1.1 var(--head);color:var(--slate)}
+.k-title .strand img{width:84px;height:84px}
+.band{font:600 30px/1.2 var(--text);color:var(--grey);margin-top:6px}
+.strip{position:absolute;left:56px;right:56px;bottom:46px;display:flex;gap:14px}
+.strip .cell{flex:1;border:3px solid var(--ink);background:var(--wash);padding:8px 12px 10px;font:800 36px/1.1 var(--head);display:flex;align-items:center;gap:12px;min-width:0}
+.strip .cell b{font:400 28px/1 var(--label);background:var(--ink);color:var(--paper);padding:4px 9px}
+.strip .cell.first{background:var(--hl)}
+.corner{position:absolute;right:48px;top:100px;width:96px;height:96px}
+.corner img{width:100%;height:100%}
+.logo{position:absolute;right:60px;top:96px;font:800 44px/1 var(--head)}
+.k-title .logo{display:none}
+
+/* big idea */
+.k-idea .main{justify-content:center}
+.k-idea .fit{flex:0 1 auto}
+.k-idea .bigtext{font:700 var(--fs-big)/1.18 var(--head);border-left:14px solid var(--tang);padding-left:30px}
+.k-idea .skill{margin-top:20px;font:600 var(--fs-small)/1.3 var(--text);color:var(--slate)}
+.k-idea .skill b{font-family:var(--label);font-weight:400;color:var(--tangtxt)}
+/* hook */
+.k-hook .quote{font:500 var(--fs-body)/1.34 var(--text);position:relative;padding-left:70px}
+.k-hook .quote::before{content:"\201C";position:absolute;left:0;top:-18px;font:800 150px/1 var(--head);color:var(--tang)}
+.k-hook .quote p+p{margin-top:.5em}
+.calm .k-hook .quote::before{color:var(--slate)}
+/* activity intro */
+.k-act .big{display:flex;align-items:flex-end;gap:26px}
+.k-act .num{font:800 150px/.85 var(--head);color:var(--ink)}
+.k-act .unit{font:700 var(--fs-big)/1 var(--head);padding-bottom:14px}
+.k-act .name{font:700 52px/1.1 var(--head);margin-top:10px;color:var(--tangtxt)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.chip{border:3px solid var(--ink);background:var(--wash);padding:6px 16px;font:600 var(--fs-small)/1.25 var(--text);max-width:100%}
+.mats{margin:12px 0 0;padding:0;list-style:none;font:500 30px/1.25 var(--text)}
+.mats li{padding-left:34px;position:relative;break-inside:avoid;margin-bottom:6px}
+.mats li::before{content:"";position:absolute;left:0;top:9px;width:18px;height:18px;border:3px solid var(--ink);background:var(--paper)}
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+.steps li{display:grid;grid-template-columns:76px 1fr auto;gap:22px;align-items:start}
+.steps .n{width:76px;height:76px;border:4px solid var(--ink);background:var(--tang);font:800 46px/68px var(--head);text-align:center}
+.steps .t{font:800 40px/1.12 var(--head)}
+.steps .g{font:500 var(--fs-small)/1.3 var(--text);margin-top:4px}
+.steps.few{gap:34px}
+.steps.few .t{font-size:50px}
+.steps.few .g{font-size:38px}
+.steps.few .n{width:92px;height:92px;font-size:56px;line-height:84px}
+.steps.few li{grid-template-columns:92px 1fr auto}
+.steps .m{font:400 28px/1.1 var(--label);border:3px solid var(--ink);padding:6px 12px;background:var(--hl);white-space:nowrap}
+.skin-junior .steps.few{gap:34px}
+.steps.few .t{font-size:50px}
+.steps.few .g{font-size:38px}
+.steps.few .n{width:92px;height:92px;font-size:56px;line-height:84px}
+.steps.few li{grid-template-columns:92px 1fr auto}
+.steps .m{font-size:36px;font-weight:700}
+.timerbox{display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:10px}
+.timerbox .read{font:800 58px/1 var(--head);min-width:150px;font-variant-numeric:tabular-nums}
+.timerbox .lbl{margin:0}
+.timerbox button{font:700 30px/1 var(--text);min-height:56px;min-width:150px;padding:0 20px;border:4px solid var(--ink);background:var(--hl);color:var(--ink);border-radius:6px;cursor:pointer}
+.timerbox button:hover{background:var(--yel)}
+.timerbox.done .read{color:var(--tangtxt);text-decoration:underline}
+/* discuss */
+.k-disc .main{justify-content:center}
+.k-disc .fit{flex:0 1 auto}
+.k-disc .q{font:700 var(--fs-q)/1.18 var(--head)}
+.k-disc .q.short{font-size:calc(var(--fs-q) * 1.3)}
+.k-disc .count{margin-top:40px}
+.k-disc .count{font:400 28px/1 var(--label);color:var(--slate)}
+.skin-junior .k-disc .count{font-size:38px;font-weight:700}
+/* takeaway */
+.k-take .key{font:800 var(--fs-big)/1.15 var(--head);background:var(--hl);border:4px solid var(--ink);padding:24px 30px}
+.calm .k-take .key{background:var(--wash)}
+.sig{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.sig div{border:3px solid var(--ink);background:var(--paper);padding:8px 12px 10px;font:700 30px/1.15 var(--text);min-width:0}
+.sig strong{display:block;font:800 36px/1.1 var(--head)}
+/* exit */
+.k-exit .card{background:var(--white);border:4px solid var(--ink);padding:30px 40px;flex:1;min-height:0;display:flex;flex-direction:column;background-image:repeating-linear-gradient(transparent 0 71px,#cfc6ae 71px 73px);background-position:0 30px}
+.k-exit .prompt{font:600 var(--fs-q)/1.28 var(--text);overflow:hidden;flex:1;min-height:0}
+.k-exit .opt{font:500 32px/1.3 var(--text);color:var(--slate);margin-top:10px}
+/* help ladder */
+.k-help .ladder{display:flex;flex-direction:column;gap:14px;flex:1;justify-content:center}
+.k-help .rung{display:flex;align-items:center;gap:20px;border:4px solid var(--ink);background:var(--wash);padding:10px 22px;font:700 38px/1.15 var(--head)}
+.k-help .rung span.rn{font:400 32px/1 var(--label);background:var(--ink);color:var(--paper);padding:6px 12px}
+.k-help .rung small{display:block;font:500 30px/1.25 var(--text);margin-top:2px;color:var(--grey)}
+.k-help .keep{font:700 38px/1.2 var(--head);margin-top:14px;color:var(--tangtxt)}
+/* fun */
+.k-fun .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0}
+.k-fun .cards.one{grid-template-columns:1fr}
+.k-fun .fc{border:4px solid var(--ink);border-left:16px solid var(--tang);background:var(--wash);padding:16px 22px;overflow:hidden;min-height:0}
+.k-fun .fc h3{font:800 38px/1.1 var(--head);margin-bottom:8px}
+.k-fun .fc p{font:500 32px/1.3 var(--text)}
+.notice{position:absolute;left:56px;right:56px;bottom:30px;font:500 28px/1.25 var(--text);color:var(--grey);border-top:2px solid var(--hair);padding-top:6px;background:var(--paper)}
+.has-notice .main{bottom:104px}
+/* teacher */
+.k-teacher .stamp{align-self:flex-start;font:400 30px/1 var(--label);border:4px double var(--tangtxt);color:var(--tangtxt);padding:6px 14px;transform:rotate(-2deg);margin-bottom:12px}
+.k-teacher ul{list-style:none;margin:0;padding:0;font:500 31px/1.28 var(--text)}
+.k-teacher li{padding-left:44px;position:relative;margin-bottom:10px}
+.k-teacher li::before{content:"";position:absolute;left:0;top:6px;width:26px;height:26px;border:3px solid var(--ink)}
+.k-teacher h2{font-size:48px;margin-bottom:10px}
+.slide[data-teacher]::after{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:var(--tangtxt)}
+.hidden-notes{display:none}
+
+@media (prefers-reduced-motion:no-preference){.slide.on{animation:fadein .18s ease-out}@keyframes fadein{from{opacity:.0}to{opacity:1}}}
+
+/* ---------- print: one slide per landscape page, no controls, no notes */
+@page{size:13.333in 7.5in;margin:0}
+@media print{
+  html,body{background:#fff;height:auto;overflow:visible}
+  .app{display:block;height:auto}
+  .controls,.notespane,.skip,.helpdlg{display:none!important}
+  .stagewrap{position:static;overflow:visible}
+  .stage{position:static;transform:none!important;width:auto;height:auto;overflow:visible}
+  .slide{display:block;position:relative;width:1280px;height:720px;page-break-after:always;break-after:page;overflow:hidden;zoom:1.0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .slide[data-teacher]{display:none}
+  .notes-on .slide[data-teacher]{display:block}
+  .timerbox button{display:none}
+}
+
+/* ---------- help dialog */
+.helpdlg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(21,22,31,.78);z-index:50}
+.helpdlg.open{display:flex}
+.helpdlg .box{background:var(--white);color:var(--ink);max-width:640px;width:90%;border:4px solid var(--ink);padding:20px 26px;font:20px/1.5 var(--text);max-height:90vh;overflow:auto}
+.helpdlg h2{font:800 28px/1.2 var(--head);margin:0 0 10px}
+.helpdlg dl{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;margin:0 0 14px}
+.helpdlg dt{font-weight:700;white-space:nowrap}
+.helpdlg dd{margin:0}
+.helpdlg button{font:700 20px/1 var(--text);min-height:44px;padding:0 20px;border:3px solid var(--ink);background:var(--hl);border-radius:6px;cursor:pointer}
+
+.k-fun.has-img .main{right:300px}
+.k-fun .picr{width:220px;height:220px;right:50px;bottom:112px}
+.k-fun .fc p{font-size:30px}
+.k-fun .fc h3{font-size:36px}
+
+.k-fun .cards{flex:0 1 auto;align-items:start}
+.k-fun .cards.one .fc{padding:26px 34px}
+.k-fun .cards.one .fc h3{font-size:44px;margin-bottom:14px}
+.k-fun .cards.one .fc p{font-size:50px;line-height:1.25;font-family:var(--head);font-weight:700}
+.k-help .ladder{justify-content:flex-start;gap:10px}
+.k-help .rung{padding:6px 20px;font-size:36px}
+.k-help .keep{font-size:32px;margin-top:10px}
+.k-exit .opt{background:var(--white);padding:4px 8px}
+
+.k-title h1.lg{font-size:calc(var(--fs-title) * .78)}
+.k-title h1.xl{font-size:calc(var(--fs-title) * .58);max-width:1100px}
+
+.timerbox{padding-top:0}
+.timerbox .read{font-size:50px}
+.timerbox button{min-height:50px;font-size:28px}
+.k-teacher ul{font-size:29px}
+
+.main{bottom:40px}
+.has-notice .main{bottom:104px}
+
+</style>
+</head>
+<body class="skin-junior band-k2">
+<a class="skip" href="#stage">Skip to the slide</a>
+<div class="app">
+<div class="stagewrap"><main id="stage" class="stage" tabindex="-1" aria-label="Lesson 10: Screen Balance">
+<section class="slide k-title" id="s1" aria-roledescription="slide" aria-label="Slide 1 of 14: Title">
+<div class="rh" aria-hidden="true">Hackles: K-2 (Ages 5-7)</div><div class="tab" aria-hidden="true">Plate 1</div>
+<div class="main"><p class="kick lbl">Lesson 10</p>
+<h1 id="t0" class="">Screen Balance</h1>
+<div class="strand"><img src="assets/img/icon_kind_and_well.svg" alt="Hand-inked seedling in a pot: the Kind and Well strand" width="84" height="84"><span>Strand: Kind and Well</span></div>
+<p class="band">Hackles: K-2 (Ages 5-7)</p></div>
+<div class="strip" role="list" aria-label="The Hackles routine"><div class="cell first" role="listitem"><b aria-hidden="true">1</b>Hackles up?</div><div class="cell" role="listitem"><b aria-hidden="true">2</b>Pause.</div><div class="cell" role="listitem"><b aria-hidden="true">3</b>Check.</div><div class="cell" role="listitem"><b aria-hidden="true">4</b>Tell.</div></div>
+<div class="picr" style="bottom:150px;right:70px"><img src="assets/img/hackle_up.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills that stand straight up. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Lesson 10: Screen Balance. 15 minutes: Hook 2, Activity 8, Discuss 3, Takeaway and exit ticket 2.</p>
+<p>Start with the routine: Hackles up? Pause. Check. Tell. Use the hand signal for the first step (hand brushed up the back of the neck).</p>
+<p>Materials: Feelings face cards, 6 (happy, calm, excited, tired, worried, mad/sad) (Reproducibles, Section 11); Break Menu cards, 8 (play outside, draw, read a book, sing, help cook, stretch, play with a pet or toy, talk to a grown-up) (Reproducibles, Section 11); A paper plate per child (“My Balance Plate”) divided into 4 wedges; crayons. (No time to pre-draw 30 plates? Use the printed Balance Plate on page 2 of the Lesson 10 Activity Book pages instead. It is the same activity and zero prep.); Student Activity Book, Lesson 10 page, plus the Hackles Certificate (last page); A chime or soft bell; Character cards: Lily, Dev, and Hackle</p>
+<p>If a student discloses something, use the disclosure box for this lesson in your Teacher Guide.</p></div>
+</section>
+<section class="slide k-idea" id="s2" aria-roledescription="slide" aria-label="Slide 2 of 14: Big idea">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 2</div>
+<div class="main"><h2 class="lbl">Big idea</h2>
+<div class="fit"><div class="bigtext" data-fitkid>Screens can be fun, and so can many other things. I notice how I feel, and I can choose a break.</div></div>
+<p class="skill"><b>We practice:</b> Name a feeling; choose a break activity; say “I need a break”.</p></div>
+<div class="notes" hidden><p>Big idea: Screens can be fun, and so can many other things. I notice how I feel, and I can choose a break. If screens make me sad, mad, worried, or tired, I tell a grown-up.</p>
+<p>Practiced skill: Name a feeling; choose a break activity; say “I need a break”</p></div>
+</section>
+<section class="slide k-hook has-img" id="s3" aria-roledescription="slide" aria-label="Slide 3 of 14: Hook 1 of 2">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 3</div>
+<div class="main"><h2 class="lbl">Hook · 2 minutes</h2>
+<div class="fit"><div class="quote" data-fitkid><p>Lily loves her tablet. She loves videos and music and games. But sometimes, after a long time on the tablet, her tummy felt grumpy. Her eyes felt tired.</p></div></div></div>
+<div class="picr"><img src="assets/img/hackle_curious.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, looking curious. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Hook, read aloud (about 2 minutes). Slide shows the main lines; the full script is here.</p>
+<p>[Do: Hold up the Lily card and a feelings face card.] Lily loves her tablet. She loves videos and music and games. But sometimes, after a long time on the tablet, her tummy felt grumpy. Her eyes felt tired. She felt cranky, and she did not even know why. Have you ever felt grumpy like that? That&#x27;s normal. It means our body wants something different.</p>
+<p class="do">[Do: Pause, accept nods.]</p></div>
+</section>
+<section class="slide k-hook has-img" id="s4" aria-roledescription="slide" aria-label="Slide 4 of 14: Hook 2 of 2">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 4</div>
+<div class="main"><h2 class="lbl">Hook</h2>
+<div class="fit"><div class="quote" data-fitkid><p>Hackle says: screens can be fun, and so can other things. Playing outside, drawing, singing, hugging a pet, eating a snack with family: these are all things that make us feel good.</p></div></div></div>
+<div class="picr"><img src="assets/img/hackle_happy.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, smiling. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Hook continued.</p>
+<p>Hackle says: screens can be fun, and so can other things. Playing outside, drawing, singing, hugging a pet, eating a snack with family: these are all things that make us feel good. Hackle needs sun, water, food, sleep, and friends. So do we. Today we will practice noticing how we feel and choosing a break. And here&#x27;s a secret that&#x27;s not a secret: if a screen ever makes you feel sad, mad, worried, or scared, you can tell a grown-up. It is not your fault, and you will not be in trouble.</p></div>
+</section>
+<section class="slide k-act" id="s5" aria-roledescription="slide" aria-label="Slide 5 of 14: Activity">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 5</div>
+<div class="main"><h2 class="lbl">Activity</h2>
+<div class="big"><span class="num" aria-hidden="true">8</span><span class="unit">minutes</span></div>
+<p class="name">My Balance Plate</p>
+<div class="chips"><span class="chip">Groups: Whole class, then at tables, then tables</span></div>
+<ul class="mats" aria-label="What we use"><li>Feelings face cards, 6</li><li>Break Menu cards, 8</li><li>A chime or soft bell</li></ul>
+<div class="timerbox" data-min="8"><span class="lbl">Timer</span><span class="read" aria-live="off">8:00</span><button type="button">Start timer</button></div></div>
+<div class="notes" hidden><p>Activity: 8 minutes. Group size: whole class on the carpet for the opening, then at tables of 4 to 6 for the plate. For 25-30 children, 5 to 7 tables.</p>
+<p>Materials: Feelings face cards, 6 (happy, calm, excited, tired, worried, mad/sad) (Reproducibles, Section 11); Break Menu cards, 8 (play outside, draw, read a book, sing, help cook, stretch, play with a pet or toy, talk to a grown-up) (Reproducibles, Section 11); A paper plate per child (“My Balance Plate”) divided into 4 wedges; crayons. (No time to pre-draw 30 plates? Use the printed Balance Plate on page 2 of the Lesson 10 Activity Book pages instead. It is the same activity and zero prep.); Student Activity Book, Lesson 10 page, plus the Hackles Certificate (last page); A chime or soft bell; Character cards: Lily, Dev, and Hackle</p>
+<p>Timer: press T (or the button) to start an 8 minute timer. Steps follow on the next slides.</p></div>
+</section>
+<section class="slide k-steps" id="s6" aria-roledescription="slide" aria-label="Slide 6 of 14: Activity steps 1 to 2">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 6</div>
+<div class="main"><h2 class="lbl">Activity steps</h2>
+<ol class="steps few"><li><span class="n" aria-hidden="true">1</span><div><div class="t">Feelings check-in</div><div class="g">Hold up each feelings face.</div></div><span class="m">2 min</span></li><li><span class="n" aria-hidden="true">2</span><div><div class="t">The Break Menu</div><div class="g">Show the 8 Break Menu cards.</div></div><span class="m">2 min</span></li></ol>
+<div class="timerbox" data-min="4"><span class="lbl">Timer</span><span class="read" aria-live="off">4:00</span><button type="button">Start timer</button></div></div>
+<div class="notes" hidden><p>Step 1 (2 min): Feelings check-in
+Hold up each feelings face. Children copy the face and say how they might feel after a long time playing a game: “Excited? Tired? Grumpy?” Teach: “Our feelings are clues. If we feel tired or grumpy, our body might be asking for a break.”</p>
+<p>Step 2 (2 min): The Break Menu
+Show the 8 Break Menu cards. Say each one, and have children act it out quickly (stretch, sing, draw in the air, pet a pretend puppy). Say: “A break menu is a list of things we can choose. We pick a break.” Teach the phrase: “I need a break.”</p>
+<p>Timer for these steps: 4 min. Press T to start.</p></div>
+</section>
+<section class="slide k-steps" id="s7" aria-roledescription="slide" aria-label="Slide 7 of 14: Activity steps 3 to 4">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 7</div>
+<div class="main"><h2 class="lbl">Activity steps</h2>
+<ol class="steps few"><li><span class="n" aria-hidden="true">3</span><div><div class="t">Make a Balance Plate</div><div class="g">Each child gets a paper plate divided into four wedges.</div></div><span class="m">3 min</span></li><li><span class="n" aria-hidden="true">4</span><div><div class="t">“Chime break.”</div><div class="g">Ring the chime.</div></div><span class="m">1 min</span></li></ol>
+<div class="timerbox" data-min="4"><span class="lbl">Timer</span><span class="read" aria-live="off">4:00</span><button type="button">Start timer</button></div></div>
+<div class="notes" hidden><p>Step 3 (3 min): Make a Balance Plate
+Each child gets a paper plate divided into four wedges (teacher pre-draws the lines). In each wedge, they draw something they enjoy: one for moving/playing, one for people (family or friends), one for quiet things (reading, drawing, sleep), and one for screens (a favorite video or game). Say: “Our plate has lots of good things. Screens are one wedge, not the whole plate.” Circulate and praise.</p>
+<p>Step 4 (1 min): “Chime break.”
+Ring the chime. Everyone puts down crayons, takes three slow breaths (smell the flower, blow the candle), and stretches. Say: “This is a break. See how it helps!”</p>
+<p>Timer for these steps: 4 min. Press T to start.</p></div>
+</section>
+<section class="slide k-disc has-img" id="s8" aria-roledescription="slide" aria-label="Slide 8 of 14: Discussion question 1">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 8</div>
+<div class="main"><h2 class="lbl">Talk about it</h2>
+<div class="fit"><p class="q short" data-fitkid>How can your body tell you it&#x27;s time for a break?</p></div>
+<p class="count">Question 1 of 3</p></div>
+<div class="picr"><img src="assets/img/hackle_curious.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, looking curious. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Discuss, question 1 of 5 (3 minutes in all).</p>
+<p>Listen for: (tired eyes, grumpy, wiggly)</p></div>
+</section>
+<section class="slide k-disc has-img" id="s9" aria-roledescription="slide" aria-label="Slide 9 of 14: Discussion question 2">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 9</div>
+<div class="main"><h2 class="lbl">Talk about it</h2>
+<div class="fit"><p class="q short" data-fitkid>What is one thing on your Break Menu you like?</p></div>
+<p class="count">Question 2 of 3</p></div>
+<div class="picr"><img src="assets/img/hackle_happy.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, smiling. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Discuss, question 2 of 5 (3 minutes in all).</p>
+<p>Listen for: (accept all)</p></div>
+</section>
+<section class="slide k-disc has-img" id="s10" aria-roledescription="slide" aria-label="Slide 10 of 14: Discussion question 3">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 10</div>
+<div class="main"><h2 class="lbl">Talk about it</h2>
+<div class="fit"><p class="q short" data-fitkid>Is a screen always bad?</p></div>
+<p class="count">Question 3 of 3</p></div>
+<div class="picr"><img src="assets/img/hackle_silly.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, making a silly face. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Discuss, question 3 of 5 (3 minutes in all).</p>
+<p>Listen for: (No! Screens can be fun and helpful. We need a balance.)</p>
+<p>More questions if time allows:
+4. What if a screen makes you feel sad, mad, or worried? (Tell a grown-up. It&#x27;s not my fault.)
+5. What if it&#x27;s hard to stop? (It&#x27;s okay to feel grumpy. Say &#x27;I need help to stop,&#x27; and pick a break.)</p></div>
+</section>
+<section class="slide k-take has-img" id="s11" aria-roledescription="slide" aria-label="Slide 11 of 14: Takeaway">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 11</div>
+<div class="main"><h2 class="lbl">Takeaway</h2>
+<div class="fit"><p class="key" data-fitkid>Screens are one part of my day. I notice how I feel and choose a break. If something online makes me worried, I tell a grown-up.</p></div>
+<div class="sig" role="list" aria-label="Hand signals"><div role="listitem"><strong>Hackles up?</strong>Hand up the back of your neck</div><div role="listitem"><strong>Pause</strong>Flat hand, stop sign</div><div role="listitem"><strong>Check</strong>Two fingers to your eyes</div><div role="listitem"><strong>Tell</strong>Hand on heart, reach out</div></div></div>
+<div class="picr"><img src="assets/img/hackle_proud.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, standing proud. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Takeaway (2 minutes together with the exit ticket). Do the hand signals as you say each word.</p>
+<p>“Today&#x27;s lesson: Screens are one part of my day. I notice how I feel and choose a break. If something online makes me worried, I tell a grown-up.” Do the chant. Then: “Pause and notice my feelings. Check: do I need a break? Tell a grown-up if I feel worried.” Hackles Certificate: Close the lesson, and the program, with the certificate ceremony (see Teacher notes). Say: “You have learned so much. You are officially a Hackles Champ!” Applaud. Hand out the certificates (Activity Book last page; children can write their own names while you sign, or pre-fill the names if you have time).</p>
+<p>Hackles line: If something online makes my hackles go up, I notice, Pause, and tell. Trust your hackles!</p></div>
+</section>
+<section class="slide k-exit" id="s12" aria-roledescription="slide" aria-label="Slide 12 of 14: Exit ticket">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 12</div>
+<div class="main"><h2 class="lbl">Exit ticket</h2>
+<div class="card"><div class="fit"><p class="prompt" data-fitkid>Circle the face that shows how you feel when you&#x27;ve been on a screen too long. Then draw a break you would pick.</p></div></div></div>
+<div class="notes" hidden><p>Exit ticket. Collect as students leave.</p>
+<p>Full text: “Circle the face that shows how you feel when you&#x27;ve been on a screen too long. Then draw a break you would pick.” Collect to see which breaks children chose.</p></div>
+</section>
+<section class="slide k-help has-img" id="s13" aria-roledescription="slide" aria-label="Slide 13 of 14: Who can help: My Tell-Someone Team">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 13</div>
+<div class="main"><h2 class="lbl">My Tell-Someone Team</h2>
+<div class="ladder"><div class="rung"><span class="rn">1</span><div>A grown-up at home<small>Someone who listens, helps and keeps you safe</small></div></div><div class="rung"><span class="rn">2</span><div>A teacher, nurse or counselor<small>Any grown-up at school can help</small></div></div><div class="rung"><span class="rn">3</span><div>Say it: &quot;I need help.&quot;<small>Then keep telling until someone helps</small></div></div></div>
+<p class="keep">Never in trouble for asking for help. It is never your fault.</p></div>
+<div class="picr"><img src="assets/img/hackle_helping.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, waving with a small red heart. Placeholder art." width="300" height="300"></div>
+<div class="notes" hidden><p>Say the sentence out loud with the class: &quot;I need help with something.&quot; Remind students that a false alarm is fine and that telling is never getting in trouble.</p>
+<p>If a student has trouble naming an adult, the school counselor and nurse are always on the ladder.</p></div>
+</section>
+<section class="slide k-fun has-img has-notice" id="s14" aria-roledescription="slide" aria-label="Slide 14 of 14: Fun Boost">
+<div class="rh" aria-hidden="true">Lesson 10 · Kind and Well</div><div class="tab" aria-hidden="true">Plate 14</div>
+<div class="main"><h2 class="lbl">Fun Boost</h2>
+<div class="cards"><div class="fc"><h3>Energizer: “Plate Dance.”</h3><p>Call a wedge and everyone does it for 10 seconds: Move, People, Quiet, Screen. End with a wobbly one-foot “balance!”</p></div><div class="fc"><h3>Chant</h3><p>Screen is one slice, not the whole plate! / Move, play, quiet, friends: that&#x27;s great!</p></div></div></div>
+<div class="picr"><img src="assets/img/hackle_silly.svg" alt="Hackle, a baby hedgehog with soft pale-yellow, tangerine-tipped quills, making a silly face. Placeholder art." width="300" height="300"></div>
+<p class="notice">(c) 2026 Competence Collective. Lesson text CC BY-NC 4.0. Hackles name, logos and art: all rights reserved.</p>
+<div class="notes" hidden><p>Pick ONE boost inside your 15 minutes. The rest are in the Teacher Guide for another day.</p>
+<p>Energizer (30 seconds): “Plate Dance.”: Call a wedge and everyone does it for 10 seconds: Move (run in place), People (wave to a neighbor), Quiet (stretch like a tree and breathe), Screen (freeze like a robot and blink slowly). End with a wobbly one-foot “balance!”</p>
+<p>Game variant: “Champ Review Relay.”: (A spiral review of the whole program.) Say a lesson clue and children do its move: Helper Hand wave (1), turn a key (2), Pause Palm at a pop-up (3), Oops-Tell-Fixed (4), arms wide or hug yourself (5), Surprise jump or Tell wave (6), kind heart (7), real or pretend hands (8), and the calm “No, Go, Tell” hand moves with no scenarios (9). Finish with the whole chant: Hackles up? Pause. Check. Tell.</p>
+<p>Chant (clap-stomp): “Screen is one slice, not the whole plate! / Move, play, quiet, friends: that&#x27;s great! / Grumpy, tired, worried, or sad? / Take a break, or tell. I&#x27;m glad!”</p>
+<p>Silly voice / puppet moment: Sleepy Hackle. Hackle “falls asleep” on the tablet with a giant snore. Children wake Hackle with breaks from the Break Menu (stretch, sing, draw in the air) until the quills perk up and Hackle says, “I needed a break! Thank you!”</p>
+<p>Level-Up Challenge: Family Break. Pick one Break Menu idea to do with a grown-up this week. Grade 2: be a Hackles Champ teacher and teach the chant (Hackles up? Pause. Check. Tell.) to someone at home. Spiral: “Who is on my Tell-Someone Team?”</p></div>
+</section>
+</main></div>
+<aside class="notespane" aria-label="Speaker notes"><h2 id="ntitle">Speaker notes</h2><div class="nbody" id="nbody" tabindex="0"></div></aside>
+<div class="controls" role="toolbar" aria-label="Slide controls">
+<button type="button" id="btn-prev" aria-label="Previous slide">&#9664; Prev</button>
+<span class="count" id="count" aria-hidden="true">1</span>
+<button type="button" id="btn-next" aria-label="Next slide">Next &#9654;</button>
+<button type="button" id="btn-notes" aria-pressed="false" aria-label="Toggle speaker notes (N)">Notes (N)</button>
+<button type="button" id="btn-full" aria-label="Toggle full screen (F)">Full screen (F)</button>
+<button type="button" id="btn-print" aria-label="Print slides (P)">Print (P)</button>
+<button type="button" id="btn-help" aria-label="Keyboard help (question mark)">Keys (?)</button>
+<a href="index.html" aria-label="Back to all decks">All decks</a>
+</div>
+</div>
+<div id="live" class="skip" role="status" aria-live="polite" style="left:-9999px"></div>
+<div class="helpdlg" id="helpdlg" role="dialog" aria-modal="true" aria-labelledby="helph"><div class="box">
+<h2 id="helph">Keyboard help</h2>
+<dl>
+<dt>Right, Down, Space, Page Down</dt><dd>Next slide (clickers send Page Up and Page Down)</dd>
+<dt>Left, Up, Page Up, Backspace</dt><dd>Previous slide</dd>
+<dt>Home, End</dt><dd>First or last slide</dd>
+<dt>1 to 9, or two digits</dt><dd>Jump to that slide</dd>
+<dt>N</dt><dd>Show or hide the speaker notes (and the teacher slide, if there is one)</dd>
+<dt>T</dt><dd>Start or pause the timer on this slide</dd>
+<dt>F</dt><dd>Full screen</dd>
+<dt>P</dt><dd>Print, one slide per page</dd>
+<dt>? or H, Esc</dt><dd>Open or close this help</dd>
+</dl>
+<button type="button" id="help-close">Close</button>
+</div></div>
+<script>
+/* Hackles deck runtime. No network, no storage, no tracking. Keyboard, clicker and button navigation. */
+(function () {
+  "use strict";
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var app = document.querySelector(".app");
+  var stage = document.getElementById("stage");
+  var wrap = document.querySelector(".stagewrap");
+  var notesBody = document.getElementById("nbody");
+  var notesTitle = document.getElementById("ntitle");
+  var live = document.getElementById("live");
+  var count = document.getElementById("count");
+  var btnNotes = document.getElementById("btn-notes");
+  var helpDlg = document.getElementById("helpdlg");
+  var cur = 0, buf = "", bufT = null, fitDone = false;
+
+  function reachable() {
+    var showT = document.body.classList.contains("notes-on");
+    var out = [];
+    slides.forEach(function (s, k) { if (!s.hasAttribute("data-teacher") || showT) out.push(k); });
+    return out;
+  }
+  function pos(k) { return reachable().indexOf(k); }
+
+  function fitSlide(s) {
+    Array.prototype.forEach.call(s.querySelectorAll(".fit"), function (box) {
+      var t = box.querySelector("[data-fitkid]");
+      if (!t) { return; }
+      t.style.fontSize = "";
+      var base = parseFloat(getComputedStyle(t).fontSize) || 40, size = base;
+      var guard = 60;
+      while (guard-- > 0 && (box.scrollHeight > box.clientHeight + 1) && size > 28) {
+        size -= 2; t.style.fontSize = size + "px";
+        Array.prototype.forEach.call(t.querySelectorAll("p,li"), function (p) { p.style.fontSize = size + "px"; });
+      }
+    });
+  }
+  function fitAll() {
+    slides.forEach(function (s) {
+      var was = s.classList.contains("on");
+      s.style.visibility = "hidden"; s.style.display = "block";
+      fitSlide(s);
+      s.style.display = ""; s.style.visibility = "";
+      if (was) { s.classList.add("on"); }
+    });
+    fitDone = true;
+  }
+
+  function scale() {
+    var w = wrap.clientWidth, h = wrap.clientHeight;
+    var s = Math.min(w / 1280, h / 720);
+    stage.style.transform = "translate(" + (-640 * s) + "px," + (-360 * s) + "px) scale(" + s + ")";
+  }
+
+  function show(k, quiet) {
+    var r = reachable();
+    if (r.indexOf(k) < 0) { k = r[0]; }
+    slides.forEach(function (s, i) {
+      var on = i === k;
+      s.classList.toggle("on", on);
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+    });
+    cur = k;
+    var s = slides[k];
+    var p = pos(k);
+    var label = s.getAttribute("aria-label");
+    var nonT = r.filter(function (i) { return !slides[i].hasAttribute("data-teacher"); });
+    count.textContent = s.hasAttribute("data-teacher") ? "Teacher slide" : (nonT.indexOf(k) + 1) + " / " + nonT.length;
+    live.textContent = label;
+    var nt = s.querySelector(".notes");
+    notesTitle.textContent = "Speaker notes: " + label;
+    notesBody.innerHTML = nt ? nt.innerHTML : "<p>No notes for this slide.</p>";
+    notesBody.scrollTop = 0;
+    if (fitDone) { fitSlide(s); }
+    try { history.replaceState(null, "", s.hasAttribute("data-teacher") ? "#t" : "#" + (nonT.indexOf(k) + 1)); } catch (e) { /* file: URLs may refuse */ }
+  }
+  function go(d) {
+    var r = reachable(), i = r.indexOf(cur) + d;
+    if (i < 0) { i = 0; } if (i >= r.length) { i = r.length - 1; }
+    show(r[i]);
+  }
+  function jumpNumber(n) {
+    // number keys count the student slides (the teacher slide is reached with Home or N then left)
+    var nonT = reachable().filter(function (i) { return !slides[i].hasAttribute("data-teacher"); });
+    if (n >= 1 && n <= nonT.length) { show(nonT[n - 1]); }
+  }
+  function toggleNotes() {
+    var on = document.body.classList.toggle("notes-on");
+    btnNotes.setAttribute("aria-pressed", on ? "true" : "false");
+    scale();
+    if (!on && slides[cur].hasAttribute("data-teacher")) { show(reachable()[0]); } else { show(cur); }
+  }
+  function toggleFull() {
+    var d = document;
+    if (!d.fullscreenElement) { try { var pr = (d.documentElement.requestFullscreen || function () {}).call(d.documentElement); if (pr && pr.catch) { pr.catch(function () { live.textContent = "Full screen was blocked by the browser. Use the browser's own full screen key."; }); } } catch (e) { /* blocked */ } }
+    else { (d.exitFullscreen || function () {}).call(d); }
+  }
+  function toggleHelp(force) {
+    var open = typeof force === "boolean" ? force : !helpDlg.classList.contains("open");
+    helpDlg.classList.toggle("open", open);
+    if (open) { document.getElementById("help-close").focus(); } else { btnNotes.focus(); }
+  }
+
+  /* timers */
+  var timers = [];
+  Array.prototype.forEach.call(document.querySelectorAll(".timerbox"), function (box) {
+    var total = parseInt(box.getAttribute("data-min"), 10) * 60, left = total, id = null;
+    var read = box.querySelector(".read"), btn = box.querySelector("button");
+    function paint() {
+      var m = Math.floor(left / 60), s = left % 60;
+      read.textContent = m + ":" + (s < 10 ? "0" : "") + s;
+    }
+    function stop() { if (id) { clearInterval(id); id = null; } btn.textContent = left === total ? "Start timer" : (left === 0 ? "Reset timer" : "Resume timer"); }
+    function toggle() {
+      if (left === 0) { left = total; box.classList.remove("done"); paint(); stop(); return; }
+      if (id) { stop(); return; }
+      btn.textContent = "Pause timer";
+      id = setInterval(function () {
+        left -= 1; paint();
+        if (left <= 0) { left = 0; box.classList.add("done"); read.textContent = "Time is up"; live.textContent = "Time is up"; stop(); }
+      }, 1000);
+    }
+    btn.addEventListener("click", toggle);
+    box._toggle = toggle;
+    paint();
+    timers.push(box);
+  });
+  function timerKey() {
+    var box = slides[cur].querySelector(".timerbox");
+    if (box && box._toggle) { box._toggle(); }
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) { return; }
+    var t = e.target, tag = t && t.tagName;
+    if (helpDlg.classList.contains("open")) { if (e.key === "Escape" || e.key === "?" ) { toggleHelp(false); e.preventDefault(); } return; }
+    var onBtn = tag === "BUTTON" || tag === "A";
+    var k = e.key, used = true;
+    if (k === "ArrowRight" || k === "ArrowDown" || k === "PageDown" || (k === " " && !onBtn) || (k === "Enter" && !onBtn)) { go(1); }
+    else if (k === "ArrowLeft" || k === "ArrowUp" || k === "PageUp" || k === "Backspace") { go(-1); }
+    else if (k === "Home") { show(reachable()[0]); }
+    else if (k === "End") { var r = reachable(); show(r[r.length - 1]); }
+    else if (k === "f" || k === "F") { toggleFull(); }
+    else if (k === "n" || k === "N") { toggleNotes(); }
+    else if (k === "p" || k === "P") { fitAll(); window.print(); }
+    else if (k === "t" || k === "T") { timerKey(); }
+    else if (k === "?" || k === "h" || k === "H") { toggleHelp(true); }
+    else if (/^[0-9]$/.test(k)) {
+      buf += k;
+      clearTimeout(bufT);
+      if (buf.length >= 2) { jumpNumber(parseInt(buf, 10)); buf = ""; }
+      else { bufT = setTimeout(function () { jumpNumber(parseInt(buf === "0" ? "10" : buf, 10)); buf = ""; }, 650); }
+    }
+    else { used = false; }
+    if (used) { e.preventDefault(); }
+  });
+  document.getElementById("btn-prev").addEventListener("click", function () { go(-1); });
+  document.getElementById("btn-next").addEventListener("click", function () { go(1); });
+  btnNotes.addEventListener("click", toggleNotes);
+  document.getElementById("btn-full").addEventListener("click", toggleFull);
+  document.getElementById("btn-print").addEventListener("click", function () { fitAll(); window.print(); });
+  document.getElementById("btn-help").addEventListener("click", function () { toggleHelp(true); });
+  document.getElementById("help-close").addEventListener("click", function () { toggleHelp(false); });
+  var ctl = document.querySelector(".controls");
+  document.addEventListener("mousemove", function () { ctl.classList.add("show"); clearTimeout(ctl._t); ctl._t = setTimeout(function () { ctl.classList.remove("show"); }, 2500); });
+  function fromHash(hv) {
+    var h = (hv !== undefined ? hv : (location.hash || "")).replace("#", ""), t = slides.filter(function (x) { return !x.hasAttribute("data-teacher"); });
+    if (h === "t" || h === "0") {
+      var ts = slides.filter(function (x) { return x.hasAttribute("data-teacher"); })[0];
+      if (ts) { if (!document.body.classList.contains("notes-on")) { toggleNotes(); } show(slides.indexOf(ts)); return true; }
+    }
+    var n = parseInt(h, 10);
+    if (n >= 1 && n <= t.length) { show(slides.indexOf(t[n - 1])); return true; }
+    return false;
+  }
+  window.addEventListener("hashchange", function () { fromHash(); });
+  window.addEventListener("resize", scale);
+  if (window.ResizeObserver) { new ResizeObserver(scale).observe(wrap); }
+  window.addEventListener("beforeprint", function () { fitAll(); });
+
+  var initHash = location.hash;
+  scale();
+  show(reachable()[0]);
+  fromHash(initHash);
+  var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  ready.then(function () { fitAll(); scale(); show(cur); });
+  window.__deck = { go: go, show: show, count: slides.length };
+})();
+
+</script>
+</body>
+</html>
