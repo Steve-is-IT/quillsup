@@ -255,15 +255,13 @@ em,i{font-style:italic}
 .band-68{--band:var(--slate);--band-on:var(--paper)}
 .band-912{--band:var(--burnt);--band-on:var(--paper)}
 
-/* phone header: small logo, nav in one row that scrolls sideways inside itself */
+/* phone header: small logo, nav wraps onto a second row (nothing is clipped) */
 @media (max-width:47.99rem){
   .strip{font-size:.8rem;line-height:1.35;padding:.35rem 0}
   .site-header .bar{display:block;padding-block:.45rem 0}
   .brand img{width:100px}
-  .site-header nav{margin-inline:calc(var(--gut) * -1);position:relative}
-  .site-header nav::after{content:"";position:absolute;top:0;right:0;bottom:0;width:1.6rem;background:linear-gradient(to right,transparent,var(--paper));pointer-events:none}
-  .nav{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;gap:0 1.15rem;padding:3px calc(var(--gut) + .6rem) 3px var(--gut);scrollbar-width:none}
-  .nav::-webkit-scrollbar{display:none}
+  .site-header nav{position:relative}
+  .nav{flex-wrap:wrap;gap:0 1rem;padding:2px 0}
   .nav a{min-height:42px}
 }
 
