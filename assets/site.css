@@ -87,7 +87,7 @@ em,i{font-style:italic}
 .btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.6rem 0 1.2rem}
 
 /* sections */
-.sec{padding-block:clamp(3.25rem,8vw,5.75rem)}
+.sec{padding-block:clamp(2.25rem,5vw,3.5rem)}
 .tint{background:var(--card)}
 .opener{border-top:3px double var(--ink);padding-top:1.25rem;margin-bottom:2.2rem;max-width:56rem}
 .opener h2{margin-bottom:.35em}
