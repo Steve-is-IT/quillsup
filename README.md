@@ -1,6 +1,6 @@
 # Quills Up (quillsup.org)
 
-The public website for **Hackles**, a free K-12 cyber safety kit by Competence Collective.
+The public website for **Hackles**, a free K-12 cyber safety kit.
 Hackles up? Pause. Check. Tell.
 
 **Status: pilot draft.** The text was drafted with AI assistance and has not yet been reviewed by a school
