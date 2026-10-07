@@ -16,7 +16,8 @@
 <link rel="icon" href="assets/Hackles_favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/Hackles_apple-touch-icon-180.png">
 <!--
-  FONTS: Fraunces, Source Serif 4 and Special Elite are served from assets/fonts/ (licences in assets/fonts/licenses/).
+  FONTS: a system grotesk stack (Bahnschrift, Segoe UI, Helvetica Neue, Arial). The wanted open-licence font, Archivo,
+  is prepared in assets/site.css as a commented-out @font-face block (owner to approve download).
   Nothing is loaded from any other site. PICTURES: which art goes where is set in assets/art.css only.
   NO AGE GATE: the age doors are plain links. This site never asks a visitor's age and has no forms or scripts.
 -->
@@ -51,8 +52,8 @@
 <!-- BAND HERO -->
 <section class="hero band-hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
+    <div class="big"><p class="band-chip"><span class="grades"><span class="sr-only">Grades </span>9-12</span><span class="ages">Ages 14-18</span></p></div>
     <div class="hero-copy">
-      <p class="band-chip"><span class="grades"><span class="sr-only">Grades </span>9-12</span><span class="ages">Ages 14-18</span></p>
       <h1 id="hero-title">Your Digital Defense Plan</h1>
       <p class="promise">Ten lessons for students aged 14 to 18. Students build their own threat model, make their own risk decisions and teach each other. Attack methods are left out.</p>
       <p>Help-seeking is the central skill. Every lesson says it in plain words: it is never your fault, and telling is not getting in trouble.</p>
@@ -86,53 +87,26 @@
 <section class="sec" id="learn" aria-labelledby="learn-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">I.</span>What this age learns</p>
+      <p class="kicker"><span class="no">01</span>What this age learns</p>
       <h2 id="learn-title">The ten lessons, in order</h2>
       <p class="deck">Each lesson takes 15 minutes: a 2-minute hook, an 8-minute activity, a 3-minute talk and a 2-minute takeaway with an exit ticket.</p>
     </header>
     <div class="with-margin">
-      <ol role="list" class="lessons">
-      <li><span class="n" aria-hidden="true">1</span><div>
-        <h3><span class="sr-only">Lesson 1: </span>Threat-Model Yourself</h3>
-        <p class="idea"><span class="strand">Share Smart (with Lock It)</span> Deciding what matters to you, what could realistically go wrong, and choosing a few protections that fit your life.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/01_threat-model-yourself.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 1: Threat-Model Yourself</span></a></li><li><a href="25_Slides/html/g912-L01_threat-model-yourself.html">Slides<span class="sr-only">, Lesson 1: Threat-Model Yourself</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">2</span><div>
-        <h3><span class="sr-only">Lesson 2: </span>Credentials and Passkeys</h3>
-        <p class="idea"><span class="strand">Lock It</span> Length beats cleverness, reuse is the real risk, and your email and phone number are the master keys to everything else.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/02_credentials-and-passkeys.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 2: Credentials and Passkeys</span></a></li><li><a href="25_Slides/html/g912-L02_credentials-and-passkeys.html">Slides<span class="sr-only">, Lesson 2: Credentials and Passkeys</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">3</span><div>
-        <h3><span class="sr-only">Lesson 3: </span>Social Engineering Case Lab</h3>
-        <p class="idea"><span class="strand">Spot It</span> Most attacks on people do not break technology. They persuade a person.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/03_social-engineering-case-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 3: Social Engineering Case Lab</span></a></li><li><a href="25_Slides/html/g912-L03_social-engineering-case-lab.html">Slides<span class="sr-only">, Lesson 3: Social Engineering Case Lab</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">4</span><div>
-        <h3><span class="sr-only">Lesson 4: </span>Data Brokers and Location</h3>
-        <p class="idea"><span class="strand">Share Smart</span> Small pieces of information that are harmless alone can be combined into a detailed picture of you.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/04_data-brokers-and-location.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 4: Data Brokers and Location</span></a></li><li><a href="25_Slides/html/g912-L04_data-brokers-and-location.html">Slides<span class="sr-only">, Lesson 4: Data Brokers and Location</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">5</span><div>
-        <h3><span class="sr-only">Lesson 5: </span>Sextortion and Image Abuse <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Safe People</span> Blackmail with intimate images (real or AI-made) is a known, scripted crime designed to work on anyone. It is never your fault.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/05_sextortion-and-image-abuse.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 5: Sextortion and Image Abuse</span></a></li><li><a href="25_Slides/html/g912-L05_sextortion-and-image-abuse.html">Slides<span class="sr-only">, Lesson 5: Sextortion and Image Abuse</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">6</span><div>
-        <h3><span class="sr-only">Lesson 6: </span>Synthetic Media and Truth</h3>
-        <p class="idea"><span class="strand">Spot It</span> Images, voices, and videos can now be made or altered by AI. The habit that works is verifying the source.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/06_synthetic-media-and-truth.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 6: Synthetic Media and Truth</span></a></li><li><a href="25_Slides/html/g912-L06_synthetic-media-and-truth.html">Slides<span class="sr-only">, Lesson 6: Synthetic Media and Truth</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">7</span><div>
-        <h3><span class="sr-only">Lesson 7: </span>Coercion in Relationships Online <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Safe People, with Kind and Well</span> Care does not look like control. Healthy relationships (romantic, friend, or family) respect privacy, choice, and "no."</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/07_coercion-in-relationships-online.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 7: Coercion in Relationships Online</span></a></li><li><a href="25_Slides/html/g912-L07_coercion-in-relationships-online.html">Slides<span class="sr-only">, Lesson 7: Coercion in Relationships Online</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">8</span><div>
-        <h3><span class="sr-only">Lesson 8: </span>Be the Helper <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Fix It</span> Friends are usually the first to know. Hear, Help, Hand off.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/08_be-the-helper.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 8: Be the Helper</span></a></li><li><a href="25_Slides/html/g912-L08_be-the-helper.html">Slides<span class="sr-only">, Lesson 8: Be the Helper</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">9</span><div>
-        <h3><span class="sr-only">Lesson 9: </span>Ethics and Careers in Security</h3>
-        <p class="idea"><span class="strand">Lock It</span> Security skills are powerful, and the line between a defender and a lawbreaker is permission.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/09_ethics-and-careers-in-security.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 9: Ethics and Careers in Security</span></a></li><li><a href="25_Slides/html/g912-L09_ethics-and-careers-in-security.html">Slides<span class="sr-only">, Lesson 9: Ethics and Careers in Security</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">10</span><div>
-        <h3><span class="sr-only">Lesson 10: </span>Capstone, My Defense Plan</h3>
-        <p class="idea"><span class="strand">All six strands</span> Turn what you learned into a short personal plan you will actually use, and teach one part to someone else.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/10_capstone-my-defense-plan.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 10: Capstone, My Defense Plan</span></a></li><li><a href="25_Slides/html/g912-L10_capstone-my-defense-plan.html">Slides<span class="sr-only">, Lesson 10: Capstone, My Defense Plan</span></a></li></ul></div></li>
-      </ol>
+      <table class="timetable">
+      <thead><tr><th scope="col">No.</th><th scope="col">Lesson</th><th scope="col" class="strand-col">Strand</th><th scope="col">Open</th></tr></thead>
+      <tbody>
+      <tr><td class="n"><span aria-hidden="true">01</span></td><td><h3><span class="sr-only">Lesson 1: </span>Threat-Model Yourself</h3><p class="idea">Deciding what matters to you, what could realistically go wrong, and choosing a few protections that fit your life.</p></td><td class="strand-cell"><span class="strand">Share Smart (with Lock It)</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/01_threat-model-yourself.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 1: Threat-Model Yourself</span></a></li><li><a href="25_Slides/html/g912-L01_threat-model-yourself.html">Slides<span class="sr-only">, Lesson 1: Threat-Model Yourself</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">02</span></td><td><h3><span class="sr-only">Lesson 2: </span>Credentials and Passkeys</h3><p class="idea">Length beats cleverness, reuse is the real risk, and your email and phone number are the master keys to everything else.</p></td><td class="strand-cell"><span class="strand">Lock It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/02_credentials-and-passkeys.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 2: Credentials and Passkeys</span></a></li><li><a href="25_Slides/html/g912-L02_credentials-and-passkeys.html">Slides<span class="sr-only">, Lesson 2: Credentials and Passkeys</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">03</span></td><td><h3><span class="sr-only">Lesson 3: </span>Social Engineering Case Lab</h3><p class="idea">Most attacks on people do not break technology. They persuade a person.</p></td><td class="strand-cell"><span class="strand">Spot It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/03_social-engineering-case-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 3: Social Engineering Case Lab</span></a></li><li><a href="25_Slides/html/g912-L03_social-engineering-case-lab.html">Slides<span class="sr-only">, Lesson 3: Social Engineering Case Lab</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">04</span></td><td><h3><span class="sr-only">Lesson 4: </span>Data Brokers and Location</h3><p class="idea">Small pieces of information that are harmless alone can be combined into a detailed picture of you.</p></td><td class="strand-cell"><span class="strand">Share Smart</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/04_data-brokers-and-location.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 4: Data Brokers and Location</span></a></li><li><a href="25_Slides/html/g912-L04_data-brokers-and-location.html">Slides<span class="sr-only">, Lesson 4: Data Brokers and Location</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">05</span></td><td><h3><span class="sr-only">Lesson 5: </span>Sextortion and Image Abuse <span class="stamp sm">Sensitive</span></h3><p class="idea">Blackmail with intimate images (real or AI-made) is a known, scripted crime designed to work on anyone. It is never your fault.</p></td><td class="strand-cell"><span class="strand">Safe People</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/05_sextortion-and-image-abuse.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 5: Sextortion and Image Abuse</span></a></li><li><a href="25_Slides/html/g912-L05_sextortion-and-image-abuse.html">Slides<span class="sr-only">, Lesson 5: Sextortion and Image Abuse</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">06</span></td><td><h3><span class="sr-only">Lesson 6: </span>Synthetic Media and Truth</h3><p class="idea">Images, voices, and videos can now be made or altered by AI. The habit that works is verifying the source.</p></td><td class="strand-cell"><span class="strand">Spot It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/06_synthetic-media-and-truth.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 6: Synthetic Media and Truth</span></a></li><li><a href="25_Slides/html/g912-L06_synthetic-media-and-truth.html">Slides<span class="sr-only">, Lesson 6: Synthetic Media and Truth</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">07</span></td><td><h3><span class="sr-only">Lesson 7: </span>Coercion in Relationships Online <span class="stamp sm">Sensitive</span></h3><p class="idea">Care does not look like control. Healthy relationships (romantic, friend, or family) respect privacy, choice, and "no."</p></td><td class="strand-cell"><span class="strand">Safe People, with Kind and Well</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/07_coercion-in-relationships-online.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 7: Coercion in Relationships Online</span></a></li><li><a href="25_Slides/html/g912-L07_coercion-in-relationships-online.html">Slides<span class="sr-only">, Lesson 7: Coercion in Relationships Online</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">08</span></td><td><h3><span class="sr-only">Lesson 8: </span>Be the Helper <span class="stamp sm">Sensitive</span></h3><p class="idea">Friends are usually the first to know. Hear, Help, Hand off.</p></td><td class="strand-cell"><span class="strand">Fix It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/08_be-the-helper.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 8: Be the Helper</span></a></li><li><a href="25_Slides/html/g912-L08_be-the-helper.html">Slides<span class="sr-only">, Lesson 8: Be the Helper</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">09</span></td><td><h3><span class="sr-only">Lesson 9: </span>Ethics and Careers in Security</h3><p class="idea">Security skills are powerful, and the line between a defender and a lawbreaker is permission.</p></td><td class="strand-cell"><span class="strand">Lock It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/09_ethics-and-careers-in-security.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 9: Ethics and Careers in Security</span></a></li><li><a href="25_Slides/html/g912-L09_ethics-and-careers-in-security.html">Slides<span class="sr-only">, Lesson 9: Ethics and Careers in Security</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">10</span></td><td><h3><span class="sr-only">Lesson 10: </span>Capstone, My Defense Plan</h3><p class="idea">Turn what you learned into a short personal plan you will actually use, and teach one part to someone else.</p></td><td class="strand-cell"><span class="strand">All six strands</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/10_capstone-my-defense-plan.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 10: Capstone, My Defense Plan</span></a></li><li><a href="25_Slides/html/g912-L10_capstone-my-defense-plan.html">Slides<span class="sr-only">, Lesson 10: Capstone, My Defense Plan</span></a></li></ul></td></tr>
+      </tbody>
+      </table>
       <div>
         <p class="margin-note"><b>Order</b>The order is deliberate: trust and skills first, the hardest topics later, and Lesson 8 after Lessons 5 and 7. Only five sessions? Teach Lessons 1, 2, 3, 5 and 10, and keep the counselor and parent steps for Lesson 5.</p>
         <p class="margin-note" style="margin-top:1.25rem"><b>Read the full scripts</b>The word-for-word scripts are in the <a href="27_Reader/04_9-12/index.html">9-12 Teacher Guide in the Reader</a>.</p>
@@ -145,33 +119,20 @@
 <section class="sec tint" id="plus" aria-labelledby="plus-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">II.</span>Plus lessons</p>
+      <p class="kicker"><span class="no">02</span>Plus lessons</p>
       <h2 id="plus-title">Plus lessons <span class="stamp">Review required</span></h2>
       <p class="deck">Four Plus lessons sit on top of the core ten, on topics some states ask for. A school outside Florida can use any Plus lesson alone.</p>
     </header>
     <p class="notice">Review status (all four): written 2026-10-05, not yet reviewed by anyone outside the author. Hackles has not been reviewed, approved or endorsed by the Florida Department of Education or any district.</p>
-    <ol role="list" class="lessons plus">
-      <li><span class="n" aria-hidden="true">P1</span><div>
-        <h3><span class="sr-only">Plus lesson P1: </span>Recruitment Online: Spot It, Say It, Report It <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Safe People (with Kind and Well)</span></p>
-        <p class="warn"><strong>REQUIRES REVIEW BY A TRAFFICKING-PREVENTION SPECIALIST BEFORE CLASSROOM USE.</strong> Sensitive lesson. Complete the Counselor Heads-Up Checklist, the family pre-notice and the opt-out arrangements before teaching. Do not teach it as a substitute teacher or without counselor coverage. Never on the same day as Lessons 5, 7 or 8.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P1_recruitment-online.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P1</span></a></li><li><a href="25_Slides/html/g912-P1_recruitment-online-spot-it-say-it-report-it.html">Slides<span class="sr-only">, Plus lesson P1</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">P2</span><div>
-        <h3><span class="sr-only">Plus lesson P2: </span>Mind, Mood, and the Scroll <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Kind and Well</span></p>
-        <p class="warn"><strong>REQUIRES REVIEW BY A SCHOOL COUNSELOR OR CLINICIAN BEFORE CLASSROOM USE.</strong> Sensitive lesson (mental health). Counselor heads-up and family note required. A formal opt-out is not required but is honored. The science and mental-health statements were not checked against primary research. Each is tagged <span class="ph">[VERIFY]</span>.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P2_mind-mood-and-the-scroll.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P2</span></a></li><li><a href="25_Slides/html/g912-P2_mind-mood-and-the-scroll.html">Slides<span class="sr-only">, Plus lesson P2</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">P3</span><div>
-        <h3><span class="sr-only">Plus lesson P3: </span>Whose Goal Is It?</h3>
-        <p class="idea"><span class="strand">Spot It (with Kind and Well)</span></p>
-        <p class="warn"><strong>Educator review before use.</strong> A teacher or counselor should read this once. Statements about how platforms earn money or affect people are marked <span class="ph">[VERIFY]</span>; cite a primary source before using any statistic in class.</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P3_whose-goal-is-it.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P3</span></a></li><li><a href="25_Slides/html/g912-P3_whose-goal-is-it.html">Slides<span class="sr-only">, Plus lesson P3</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">P4</span><div>
-        <h3><span class="sr-only">Plus lesson P4: </span>From Mean to Harmful: Recognize, Respond, Report</h3>
-        <p class="idea"><span class="strand">Kind and Well (with Safe People)</span></p>
-        <p class="warn"><strong>Educator review before use.</strong> Counsel should confirm the evidence wording in the teacher notes before the lesson goes to families. <span class="ph">[COUNSEL TO CONFIRM]</span></p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P4_from-mean-to-harmful.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P4</span></a></li><li><a href="25_Slides/html/g912-P4_from-mean-to-harmful-recognize-respond-report.html">Slides<span class="sr-only">, Plus lesson P4</span></a></li></ul></div></li>
-    </ol>
+    <table class="timetable plus">
+      <thead><tr><th scope="col">No.</th><th scope="col">Lesson</th><th scope="col" class="strand-col">Strand</th><th scope="col">Open</th></tr></thead>
+      <tbody>
+      <tr><td class="n"><span aria-hidden="true">P1</span></td><td><h3><span class="sr-only">Plus lesson P1: </span>Recruitment Online: Spot It, Say It, Report It <span class="stamp sm">Sensitive</span></h3><p class="warn"><strong>REQUIRES REVIEW BY A TRAFFICKING-PREVENTION SPECIALIST BEFORE CLASSROOM USE.</strong> Sensitive lesson. Complete the Counselor Heads-Up Checklist, the family pre-notice and the opt-out arrangements before teaching. Do not teach it as a substitute teacher or without counselor coverage. Never on the same day as Lessons 5, 7 or 8.</p></td><td class="strand-cell"><span class="strand">Safe People (with Kind and Well)</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P1_recruitment-online.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P1</span></a></li><li><a href="25_Slides/html/g912-P1_recruitment-online-spot-it-say-it-report-it.html">Slides<span class="sr-only">, Plus lesson P1</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">P2</span></td><td><h3><span class="sr-only">Plus lesson P2: </span>Mind, Mood, and the Scroll <span class="stamp sm">Sensitive</span></h3><p class="warn"><strong>REQUIRES REVIEW BY A SCHOOL COUNSELOR OR CLINICIAN BEFORE CLASSROOM USE.</strong> Sensitive lesson (mental health). Counselor heads-up and family note required. A formal opt-out is not required but is honored. The science and mental-health statements were not checked against primary research. Each is tagged <span class="ph">[VERIFY]</span>.</p></td><td class="strand-cell"><span class="strand">Kind and Well</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P2_mind-mood-and-the-scroll.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P2</span></a></li><li><a href="25_Slides/html/g912-P2_mind-mood-and-the-scroll.html">Slides<span class="sr-only">, Plus lesson P2</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">P3</span></td><td><h3><span class="sr-only">Plus lesson P3: </span>Whose Goal Is It?</h3><p class="warn"><strong>Educator review before use.</strong> A teacher or counselor should read this once. Statements about how platforms earn money or affect people are marked <span class="ph">[VERIFY]</span>; cite a primary source before using any statistic in class.</p></td><td class="strand-cell"><span class="strand">Spot It (with Kind and Well)</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P3_whose-goal-is-it.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P3</span></a></li><li><a href="25_Slides/html/g912-P3_whose-goal-is-it.html">Slides<span class="sr-only">, Plus lesson P3</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">P4</span></td><td><h3><span class="sr-only">Plus lesson P4: </span>From Mean to Harmful: Recognize, Respond, Report</h3><p class="warn"><strong>Educator review before use.</strong> Counsel should confirm the evidence wording in the teacher notes before the lesson goes to families. <span class="ph">[COUNSEL TO CONFIRM]</span></p></td><td class="strand-cell"><span class="strand">Kind and Well (with Safe People)</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/9-12/P4_from-mean-to-harmful.pdf">Lesson card (PDF)<span class="sr-only">, Plus lesson P4</span></a></li><li><a href="25_Slides/html/g912-P4_from-mean-to-harmful-recognize-respond-report.html">Slides<span class="sr-only">, Plus lesson P4</span></a></li></ul></td></tr>
+      </tbody>
+      </table>
   </div>
 </section>
 
@@ -179,7 +140,7 @@
 <section class="sec" id="start" aria-labelledby="start-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">III.</span>A three-step start</p>
+      <p class="kicker"><span class="no">03</span>A three-step start</p>
       <h2 id="start-title">Teach it this week</h2>
     </header>
     <ol role="list" class="steps">
@@ -198,7 +159,7 @@
 <section class="sec tint" id="download" aria-labelledby="dl-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">IV.</span>Downloads</p>
+      <p class="kicker"><span class="no">04</span>Downloads</p>
       <h2 id="dl-title">Downloads for 9-12</h2>
       <p class="deck">Each ZIP holds a short README.txt, Word files you can edit and PDFs you can print. Every other bundle is in the <a href="all.html#download">full download center</a>.</p>
     </header>
@@ -248,7 +209,7 @@
 <section class="sec" id="sensitive" aria-labelledby="sens-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">V.</span>A note for the adult who teaches</p>
+      <p class="kicker"><span class="no">05</span>A note for the adult who teaches</p>
       <h2 id="sens-title">Sensitive lessons and the counselor heads-up</h2>
     </header>
     <div class="two">
@@ -288,7 +249,7 @@
 <section class="sec tint" id="families" aria-labelledby="fam-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">VI.</span>The family piece</p>
+      <p class="kicker"><span class="no">06</span>The family piece</p>
       <h2 id="fam-title">For families of ages 14 to 18</h2>
     </header>
     <div class="with-margin">
@@ -312,7 +273,7 @@
 <section class="sec" id="tools" aria-labelledby="tools-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">VII.</span>Practice and play</p>
+      <p class="kicker"><span class="no">07</span>Practice and play</p>
       <h2 id="tools-title">Lab tools and games that fit</h2>
       <p class="deck">Two of the six Lab tools reach this age. They run offline in a browser. They use JavaScript, send nothing anywhere and store nothing.</p>
     </header>

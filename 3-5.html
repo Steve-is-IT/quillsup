@@ -16,7 +16,8 @@
 <link rel="icon" href="assets/Hackles_favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/Hackles_apple-touch-icon-180.png">
 <!--
-  FONTS: Fraunces, Source Serif 4 and Special Elite are served from assets/fonts/ (licences in assets/fonts/licenses/).
+  FONTS: a system grotesk stack (Bahnschrift, Segoe UI, Helvetica Neue, Arial). The wanted open-licence font, Archivo,
+  is prepared in assets/site.css as a commented-out @font-face block (owner to approve download).
   Nothing is loaded from any other site. PICTURES: which art goes where is set in assets/art.css only.
   NO AGE GATE: the age doors are plain links. This site never asks a visitor's age and has no forms or scripts.
 -->
@@ -51,8 +52,8 @@
 <!-- BAND HERO -->
 <section class="hero band-hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
+    <div class="big"><p class="band-chip"><span class="grades"><span class="sr-only">Grades </span>3-5</span><span class="ages">Ages 8-10</span></p></div>
     <div class="hero-copy">
-      <p class="band-chip"><span class="grades"><span class="sr-only">Grades </span>3-5</span><span class="ages">Ages 8-10</span></p>
       <h1 id="hero-title">Hands-On Hackers</h1>
       <p class="promise">Ten hands-on lessons for children aged 8 to 10. Each one is a mini-lab or a rehearsal: students crack a code, time a password guess, sort scams and practise what to say out loud.</p>
       <p>The promise to students, repeated in every lesson: you are never in trouble for telling, and it is never your fault.</p>
@@ -85,53 +86,26 @@
 <section class="sec" id="learn" aria-labelledby="learn-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">I.</span>What this age learns</p>
+      <p class="kicker"><span class="no">01</span>What this age learns</p>
       <h2 id="learn-title">The ten lessons, in order</h2>
       <p class="deck">Each lesson takes 15 minutes: a 2-minute hook, an 8-minute activity, a 3-minute talk and a 2-minute takeaway with an exit ticket.</p>
     </header>
     <div class="with-margin">
-      <ol role="list" class="lessons">
-      <li><span class="n" aria-hidden="true">1</span><div>
-        <h3><span class="sr-only">Lesson 1: </span>The Help Ladder <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Fix It</span> Role-play 3 rungs</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/01_the-help-ladder.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 1: The Help Ladder</span></a></li><li><a href="25_Slides/html/g35-L01_the-help-ladder.html">Slides<span class="sr-only">, Lesson 1: The Help Ladder</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">2</span><div>
-        <h3><span class="sr-only">Lesson 2: </span>Passphrase Lab</h3>
-        <p class="idea"><span class="strand">Lock It</span> Crack-timer shows length beats cleverness</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/02_passphrase-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 2: Passphrase Lab</span></a></li><li><a href="25_Slides/html/g35-L02_passphrase-lab.html">Slides<span class="sr-only">, Lesson 2: Passphrase Lab</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">3</span><div>
-        <h3><span class="sr-only">Lesson 3: </span>Scam Spotters</h3>
-        <p class="idea"><span class="strand">Spot It</span> Sort and SPOT scams</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/03_scam-spotters.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 3: Scam Spotters</span></a></li><li><a href="25_Slides/html/g35-L03_scam-spotters.html">Slides<span class="sr-only">, Lesson 3: Scam Spotters</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">4</span><div>
-        <h3><span class="sr-only">Lesson 4: </span>Secret Code Lab</h3>
-        <p class="idea"><span class="strand">Lock It</span> Cipher wheel, what encryption is</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/04_secret-code-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 4: Secret Code Lab</span></a></li><li><a href="25_Slides/html/g35-L04_secret-code-lab.html">Slides<span class="sr-only">, Lesson 4: Secret Code Lab</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">5</span><div>
-        <h3><span class="sr-only">Lesson 5: </span>Data Detective</h3>
-        <p class="idea"><span class="strand">Share Smart</span> Combine clues to find a fake kid</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/05_data-detective.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 5: Data Detective</span></a></li><li><a href="25_Slides/html/g35-L05_data-detective.html">Slides<span class="sr-only">, Lesson 5: Data Detective</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">6</span><div>
-        <h3><span class="sr-only">Lesson 6: </span>Game Chat Red Flags <span class="stamp sm">Sensitive</span></h3>
-        <p class="idea"><span class="strand">Safe People</span> Spot red flags, exit script</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/06_game-chat-red-flags.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 6: Game Chat Red Flags</span></a></li><li><a href="25_Slides/html/g35-L06_game-chat-red-flags.html">Slides<span class="sr-only">, Lesson 6: Game Chat Red Flags</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">7</span><div>
-        <h3><span class="sr-only">Lesson 7: </span>Upstander Moves</h3>
-        <p class="idea"><span class="strand">Kind and Well</span> Four upstander moves</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/07_upstander-moves.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 7: Upstander Moves</span></a></li><li><a href="25_Slides/html/g35-L07_upstander-moves.html">Slides<span class="sr-only">, Lesson 7: Upstander Moves</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">8</span><div>
-        <h3><span class="sr-only">Lesson 8: </span>Real or Fake?</h3>
-        <p class="idea"><span class="strand">Spot It</span> Check images, voices, chatbots</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/08_real-or-fake.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 8: Real or Fake?</span></a></li><li><a href="25_Slides/html/g35-L08_real-or-fake.html">Slides<span class="sr-only">, Lesson 8: Real or Fake?</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">9</span><div>
-        <h3><span class="sr-only">Lesson 9: </span>Family Code Word</h3>
-        <p class="idea"><span class="strand">Spot It and Fix It</span> Code word and callback rule</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/09_family-code-word.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 9: Family Code Word</span></a></li><li><a href="25_Slides/html/g35-L09_family-code-word.html">Slides<span class="sr-only">, Lesson 9: Family Code Word</span></a></li></ul></div></li>
-      <li><span class="n" aria-hidden="true">10</span><div>
-        <h3><span class="sr-only">Lesson 10: </span>Oops Recovery</h3>
-        <p class="idea"><span class="strand">Fix It</span> Step-by-step recovery</p>
-        <ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/10_oops-recovery.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 10: Oops Recovery</span></a></li><li><a href="25_Slides/html/g35-L10_oops-recovery.html">Slides<span class="sr-only">, Lesson 10: Oops Recovery</span></a></li></ul></div></li>
-      </ol>
+      <table class="timetable">
+      <thead><tr><th scope="col">No.</th><th scope="col">Lesson</th><th scope="col" class="strand-col">Strand</th><th scope="col">Open</th></tr></thead>
+      <tbody>
+      <tr><td class="n"><span aria-hidden="true">01</span></td><td><h3><span class="sr-only">Lesson 1: </span>The Help Ladder <span class="stamp sm">Sensitive</span></h3><p class="idea">Role-play 3 rungs</p></td><td class="strand-cell"><span class="strand">Fix It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/01_the-help-ladder.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 1: The Help Ladder</span></a></li><li><a href="25_Slides/html/g35-L01_the-help-ladder.html">Slides<span class="sr-only">, Lesson 1: The Help Ladder</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">02</span></td><td><h3><span class="sr-only">Lesson 2: </span>Passphrase Lab</h3><p class="idea">Crack-timer shows length beats cleverness</p></td><td class="strand-cell"><span class="strand">Lock It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/02_passphrase-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 2: Passphrase Lab</span></a></li><li><a href="25_Slides/html/g35-L02_passphrase-lab.html">Slides<span class="sr-only">, Lesson 2: Passphrase Lab</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">03</span></td><td><h3><span class="sr-only">Lesson 3: </span>Scam Spotters</h3><p class="idea">Sort and SPOT scams</p></td><td class="strand-cell"><span class="strand">Spot It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/03_scam-spotters.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 3: Scam Spotters</span></a></li><li><a href="25_Slides/html/g35-L03_scam-spotters.html">Slides<span class="sr-only">, Lesson 3: Scam Spotters</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">04</span></td><td><h3><span class="sr-only">Lesson 4: </span>Secret Code Lab</h3><p class="idea">Cipher wheel, what encryption is</p></td><td class="strand-cell"><span class="strand">Lock It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/04_secret-code-lab.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 4: Secret Code Lab</span></a></li><li><a href="25_Slides/html/g35-L04_secret-code-lab.html">Slides<span class="sr-only">, Lesson 4: Secret Code Lab</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">05</span></td><td><h3><span class="sr-only">Lesson 5: </span>Data Detective</h3><p class="idea">Combine clues to find a fake kid</p></td><td class="strand-cell"><span class="strand">Share Smart</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/05_data-detective.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 5: Data Detective</span></a></li><li><a href="25_Slides/html/g35-L05_data-detective.html">Slides<span class="sr-only">, Lesson 5: Data Detective</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">06</span></td><td><h3><span class="sr-only">Lesson 6: </span>Game Chat Red Flags <span class="stamp sm">Sensitive</span></h3><p class="idea">Spot red flags, exit script</p></td><td class="strand-cell"><span class="strand">Safe People</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/06_game-chat-red-flags.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 6: Game Chat Red Flags</span></a></li><li><a href="25_Slides/html/g35-L06_game-chat-red-flags.html">Slides<span class="sr-only">, Lesson 6: Game Chat Red Flags</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">07</span></td><td><h3><span class="sr-only">Lesson 7: </span>Upstander Moves</h3><p class="idea">Four upstander moves</p></td><td class="strand-cell"><span class="strand">Kind and Well</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/07_upstander-moves.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 7: Upstander Moves</span></a></li><li><a href="25_Slides/html/g35-L07_upstander-moves.html">Slides<span class="sr-only">, Lesson 7: Upstander Moves</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">08</span></td><td><h3><span class="sr-only">Lesson 8: </span>Real or Fake?</h3><p class="idea">Check images, voices, chatbots</p></td><td class="strand-cell"><span class="strand">Spot It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/08_real-or-fake.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 8: Real or Fake?</span></a></li><li><a href="25_Slides/html/g35-L08_real-or-fake.html">Slides<span class="sr-only">, Lesson 8: Real or Fake?</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">09</span></td><td><h3><span class="sr-only">Lesson 9: </span>Family Code Word</h3><p class="idea">Code word and callback rule</p></td><td class="strand-cell"><span class="strand">Spot It and Fix It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/09_family-code-word.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 9: Family Code Word</span></a></li><li><a href="25_Slides/html/g35-L09_family-code-word.html">Slides<span class="sr-only">, Lesson 9: Family Code Word</span></a></li></ul></td></tr>
+      <tr><td class="n"><span aria-hidden="true">10</span></td><td><h3><span class="sr-only">Lesson 10: </span>Oops Recovery</h3><p class="idea">Step-by-step recovery</p></td><td class="strand-cell"><span class="strand">Fix It</span></td><td class="links"><ul role="list" class="pl-links"><li><a href="24_Lesson_Cards/EN/3-5/10_oops-recovery.pdf">Lesson card (PDF)<span class="sr-only">, Lesson 10: Oops Recovery</span></a></li><li><a href="25_Slides/html/g35-L10_oops-recovery.html">Slides<span class="sr-only">, Lesson 10: Oops Recovery</span></a></li></ul></td></tr>
+      </tbody>
+      </table>
       <div>
         <p class="margin-note"><b>Order</b>The lessons build in order, but you can reorder them if your school needs a topic sooner. Start with Lesson 1 either way. Only five lessons to spare? Teach 1, 3, 6, 9 and 10.</p>
         <p class="margin-note" style="margin-top:1.25rem"><b>Read the full scripts</b>The word-for-word scripts are in the <a href="27_Reader/02_3-5/index.html">3-5 Teacher Guide in the Reader</a>.</p>
@@ -144,7 +118,7 @@
 <section class="sec tint" id="start" aria-labelledby="start-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">II.</span>A three-step start</p>
+      <p class="kicker"><span class="no">02</span>A three-step start</p>
       <h2 id="start-title">Teach it this week</h2>
     </header>
     <ol role="list" class="steps">
@@ -163,7 +137,7 @@
 <section class="sec" id="download" aria-labelledby="dl-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">III.</span>Downloads</p>
+      <p class="kicker"><span class="no">03</span>Downloads</p>
       <h2 id="dl-title">Downloads for 3-5</h2>
       <p class="deck">Each ZIP holds a short README.txt, Word files you can edit and PDFs you can print. Every other bundle is in the <a href="all.html#download">full download center</a>.</p>
     </header>
@@ -218,7 +192,7 @@
 <section class="sec tint" id="sensitive" aria-labelledby="sens-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">IV.</span>A note for the adult who teaches</p>
+      <p class="kicker"><span class="no">04</span>A note for the adult who teaches</p>
       <h2 id="sens-title">Sensitive lessons and the counselor heads-up</h2>
     </header>
     <div class="two">
@@ -251,7 +225,7 @@
 <section class="sec" id="families" aria-labelledby="fam-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">V.</span>The family piece</p>
+      <p class="kicker"><span class="no">05</span>The family piece</p>
       <h2 id="fam-title">For families of ages 8 to 10</h2>
     </header>
     <div class="with-margin">
@@ -275,7 +249,7 @@
 <section class="sec tint" id="tools" aria-labelledby="tools-title">
   <div class="wrap">
     <header class="opener">
-      <p class="kicker"><span class="no">VI.</span>Practice and play</p>
+      <p class="kicker"><span class="no">06</span>Practice and play</p>
       <h2 id="tools-title">Lab tools and games that fit</h2>
       <p class="deck">All six Lab tools fit this age, and three share a name with a lesson. They run offline in a browser. They use JavaScript, send nothing anywhere and store nothing.</p>
     </header>
